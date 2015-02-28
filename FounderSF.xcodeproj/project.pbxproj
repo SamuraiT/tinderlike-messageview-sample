@@ -13,6 +13,8 @@
 		56E55CB21AA18D7A00C32DF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CB11AA18D7A00C32DF6 /* Images.xcassets */; };
 		56E55CB51AA18D7A00C32DF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CB31AA18D7A00C32DF6 /* LaunchScreen.xib */; };
 		56E55CC11AA18D7B00C32DF6 /* FounderSFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CC01AA18D7B00C32DF6 /* FounderSFTests.swift */; };
+		56E55CCF1AA1992200C32DF6 /* EntryDIsplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CCE1AA1992200C32DF6 /* EntryDIsplayViewController.swift */; };
+		56E55CD11AA199D900C32DF6 /* EntryDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CD01AA199D900C32DF6 /* EntryDisplay.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		56E55CBA1AA18D7B00C32DF6 /* FounderSFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FounderSFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E55CBF1AA18D7B00C32DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E55CC01AA18D7B00C32DF6 /* FounderSFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FounderSFTests.swift; sourceTree = "<group>"; };
+		56E55CCE1AA1992200C32DF6 /* EntryDIsplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDIsplayViewController.swift; sourceTree = "<group>"; };
+		56E55CD01AA199D900C32DF6 /* EntryDisplay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntryDisplay.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 		56E55CCA1AA1900600C32DF6 /* EntryDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				56E55CCE1AA1992200C32DF6 /* EntryDIsplayViewController.swift */,
+				56E55CD01AA199D900C32DF6 /* EntryDisplay.storyboard */,
 			);
 			path = EntryDisplay;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			files = (
 				56E55CB01AA18D7A00C32DF6 /* Main.storyboard in Resources */,
 				56E55CB51AA18D7A00C32DF6 /* LaunchScreen.xib in Resources */,
+				56E55CD11AA199D900C32DF6 /* EntryDisplay.storyboard in Resources */,
 				56E55CB21AA18D7A00C32DF6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +253,7 @@
 			files = (
 				56E55CAD1AA18D7A00C32DF6 /* ViewController.swift in Sources */,
 				56E55CAB1AA18D7A00C32DF6 /* AppDelegate.swift in Sources */,
+				56E55CCF1AA1992200C32DF6 /* EntryDIsplayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
