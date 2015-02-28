@@ -17,6 +17,16 @@ class EntryDisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        drawBlurImage(entryImage)
+        drawBorderButton(founderOutlet)
+        drawBorderButton(investorOutlet)
+    }
+  
+    func drawBlurImage(imageView:UIImageView!){
+        let blurEffect = UIBlurEffect(style: .Light)
+        var visualEffectView = UIVisualEffectView(effect: blurEffect)
+        visualEffectView.frame = imageView.bounds
+        imageView.addSubview(visualEffectView)
     }
     
     func drawBorderButton(outlet: UIButton!){
