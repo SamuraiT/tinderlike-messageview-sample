@@ -41,6 +41,11 @@ class EntryDisplayViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func founderTapped(sender: AnyObject) {
+    }
     
+    @IBAction func investorTapped(sender: AnyObject) {
+    }
+
 }
 
