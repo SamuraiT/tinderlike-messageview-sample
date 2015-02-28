@@ -77,7 +77,11 @@
 		56E55CA71AA18D7A00C32DF6 /* FounderSF */ = {
 			isa = PBXGroup;
 			children = (
+				56E55CCD1AA1978E00C32DF6 /* Message */,
+				56E55CCC1AA196D400C32DF6 /* StartupInvestorList */,
+				56E55CCB1AA1967700C32DF6 /* Login */,
 				56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */,
+				56E55CCA1AA1900600C32DF6 /* EntryDisplay */,
 				56E55CAC1AA18D7A00C32DF6 /* ViewController.swift */,
 				56E55CAE1AA18D7A00C32DF6 /* Main.storyboard */,
 				56E55CB11AA18D7A00C32DF6 /* Images.xcassets */,
@@ -110,6 +114,34 @@
 				56E55CBF1AA18D7B00C32DF6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56E55CCA1AA1900600C32DF6 /* EntryDisplay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EntryDisplay;
+			sourceTree = "<group>";
+		};
+		56E55CCB1AA1967700C32DF6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		56E55CCC1AA196D400C32DF6 /* StartupInvestorList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StartupInvestorList;
+			sourceTree = "<group>";
+		};
+		56E55CCD1AA1978E00C32DF6 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
