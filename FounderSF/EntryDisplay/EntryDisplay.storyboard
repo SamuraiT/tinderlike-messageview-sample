@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YCG-cq-xbk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Entry Display View Controller-->
@@ -15,13 +16,64 @@
                     <view key="view" contentMode="scaleToFill" id="WBi-jK-BQW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consmos.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vVH-U4-hCz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53w-lt-CNm">
+                                <rect key="frame" x="99" y="231" width="217" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="AHh-Q1-lyq"/>
+                                    <constraint firstAttribute="height" constant="75" id="Fnw-lX-jN2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Founder">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="founderTapped:" destination="YCG-cq-xbk" eventType="touchUpInside" id="0Uj-C2-5Oa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwH-Mf-F56">
+                                <rect key="frame" x="99" y="340" width="217" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="1JT-mw-snl"/>
+                                    <constraint firstAttribute="height" constant="75" id="9FZ-Uf-fhB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Investor">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="investorTapped:" destination="YCG-cq-xbk" eventType="touchUpInside" id="iGE-bY-gVs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vVH-U4-hCz" firstAttribute="centerY" secondItem="53w-lt-CNm" secondAttribute="centerY" constant="99.5" id="Eyx-eI-seZ"/>
+                            <constraint firstItem="vVH-U4-hCz" firstAttribute="centerY" secondItem="HwH-Mf-F56" secondAttribute="centerY" constant="-9.5" id="F4m-Tc-mlm"/>
+                            <constraint firstItem="vVH-U4-hCz" firstAttribute="leading" secondItem="WBi-jK-BQW" secondAttribute="leadingMargin" constant="-16" id="OXO-Sy-0J9"/>
+                            <constraint firstItem="vVH-U4-hCz" firstAttribute="top" secondItem="WBi-jK-BQW" secondAttribute="topMargin" id="Qlw-7z-JaP"/>
+                            <constraint firstItem="vVH-U4-hCz" firstAttribute="centerX" secondItem="HwH-Mf-F56" secondAttribute="centerX" constant="-0.5" id="hUY-aN-VqD"/>
+                            <constraint firstItem="NbX-4y-nbv" firstAttribute="top" secondItem="vVH-U4-hCz" secondAttribute="bottom" id="n6t-Mg-UO6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vVH-U4-hCz" secondAttribute="trailing" constant="-16" id="pA9-BC-uZL"/>
+                            <constraint firstItem="vVH-U4-hCz" firstAttribute="centerX" secondItem="53w-lt-CNm" secondAttribute="centerX" constant="-0.5" id="pN3-LY-5K3"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="entryImage" destination="vVH-U4-hCz" id="500-16-tFn"/>
+                        <outlet property="founderOutlet" destination="53w-lt-CNm" id="4cE-qX-8z1"/>
+                        <outlet property="investorOutlet" destination="HwH-Mf-F56" id="Arg-MH-aQE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKn-XM-LCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="339" y="408"/>
+            <point key="canvasLocation" x="311" y="395"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="consmos.jpg" width="457" height="640"/>
+    </resources>
 </document>

@@ -15,6 +15,7 @@
 		56E55CC11AA18D7B00C32DF6 /* FounderSFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CC01AA18D7B00C32DF6 /* FounderSFTests.swift */; };
 		56E55CCF1AA1992200C32DF6 /* EntryDIsplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CCE1AA1992200C32DF6 /* EntryDIsplayViewController.swift */; };
 		56E55CD11AA199D900C32DF6 /* EntryDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CD01AA199D900C32DF6 /* EntryDisplay.storyboard */; };
+		56E55CD61AA2719D00C32DF6 /* consmos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CD51AA2719D00C32DF6 /* consmos.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		56E55CC01AA18D7B00C32DF6 /* FounderSFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FounderSFTests.swift; sourceTree = "<group>"; };
 		56E55CCE1AA1992200C32DF6 /* EntryDIsplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDIsplayViewController.swift; sourceTree = "<group>"; };
 		56E55CD01AA199D900C32DF6 /* EntryDisplay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntryDisplay.storyboard; sourceTree = "<group>"; };
+		56E55CD51AA2719D00C32DF6 /* consmos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = consmos.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		56E55CA71AA18D7A00C32DF6 /* FounderSF */ = {
 			isa = PBXGroup;
 			children = (
+				56E55CD21AA26F3B00C32DF6 /* images */,
 				56E55CCD1AA1978E00C32DF6 /* Message */,
 				56E55CCC1AA196D400C32DF6 /* StartupInvestorList */,
 				56E55CCB1AA1967700C32DF6 /* Login */,
@@ -148,6 +151,14 @@
 			children = (
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		56E55CD21AA26F3B00C32DF6 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				56E55CD51AA2719D00C32DF6 /* consmos.jpg */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				56E55CB51AA18D7A00C32DF6 /* LaunchScreen.xib in Resources */,
 				56E55CD11AA199D900C32DF6 /* EntryDisplay.storyboard in Resources */,
 				56E55CB21AA18D7A00C32DF6 /* Images.xcassets in Resources */,
+				56E55CD61AA2719D00C32DF6 /* consmos.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +457,7 @@
 				56E55CC61AA18D7B00C32DF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56E55CC71AA18D7B00C32DF6 /* Build configuration list for PBXNativeTarget "FounderSFTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +466,7 @@
 				56E55CC91AA18D7B00C32DF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
