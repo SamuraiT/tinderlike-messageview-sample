@@ -16,6 +16,9 @@
 		56E55CD61AA2719D00C32DF6 /* consmos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CD51AA2719D00C32DF6 /* consmos.jpg */; };
 		56E55CDA1AA2875100C32DF6 /* EntryDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CD91AA2875100C32DF6 /* EntryDisplay.storyboard */; };
 		56E55CDE1AA287B400C32DF6 /* EntryDIsplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CDD1AA287B400C32DF6 /* EntryDIsplayViewController.swift */; };
+		56E55CE11AA2895100C32DF6 /* FounderInvestorTinder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CE01AA2895100C32DF6 /* FounderInvestorTinder.storyboard */; };
+		56E55CE41AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CE31AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift */; };
+		56E55CE71AA2936B00C32DF6 /* UIStoryBoardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CE61AA2936B00C32DF6 /* UIStoryBoardExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		56E55CD51AA2719D00C32DF6 /* consmos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = consmos.jpg; sourceTree = "<group>"; };
 		56E55CD91AA2875100C32DF6 /* EntryDisplay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntryDisplay.storyboard; sourceTree = "<group>"; };
 		56E55CDD1AA287B400C32DF6 /* EntryDIsplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDIsplayViewController.swift; sourceTree = "<group>"; };
+		56E55CE01AA2895100C32DF6 /* FounderInvestorTinder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FounderInvestorTinder.storyboard; sourceTree = "<group>"; };
+		56E55CE31AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FounderInvestorTinderViewController.swift; sourceTree = "<group>"; };
+		56E55CE61AA2936B00C32DF6 /* UIStoryBoardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryBoardExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		56E55CA71AA18D7A00C32DF6 /* FounderSF */ = {
 			isa = PBXGroup;
 			children = (
+				56E55CE51AA2930F00C32DF6 /* Utils */,
 				56E55CD81AA284CC00C32DF6 /* Storyboard */,
 				56E55CD71AA284B500C32DF6 /* Views */,
 				56E55CD21AA26F3B00C32DF6 /* images */,
@@ -164,6 +171,7 @@
 		56E55CD71AA284B500C32DF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56E55CE21AA2895E00C32DF6 /* FounderInvestorTinder */,
 				56E55CCA1AA1900600C32DF6 /* EntryDisplay */,
 			);
 			path = Views;
@@ -173,8 +181,25 @@
 			isa = PBXGroup;
 			children = (
 				56E55CD91AA2875100C32DF6 /* EntryDisplay.storyboard */,
+				56E55CE01AA2895100C32DF6 /* FounderInvestorTinder.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		56E55CE21AA2895E00C32DF6 /* FounderInvestorTinder */ = {
+			isa = PBXGroup;
+			children = (
+				56E55CE31AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift */,
+			);
+			path = FounderInvestorTinder;
+			sourceTree = "<group>";
+		};
+		56E55CE51AA2930F00C32DF6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				56E55CE61AA2936B00C32DF6 /* UIStoryBoardExtension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +284,7 @@
 			files = (
 				56E55CB01AA18D7A00C32DF6 /* Main.storyboard in Resources */,
 				56E55CB51AA18D7A00C32DF6 /* LaunchScreen.xib in Resources */,
+				56E55CE11AA2895100C32DF6 /* FounderInvestorTinder.storyboard in Resources */,
 				56E55CDA1AA2875100C32DF6 /* EntryDisplay.storyboard in Resources */,
 				56E55CB21AA18D7A00C32DF6 /* Images.xcassets in Resources */,
 				56E55CD61AA2719D00C32DF6 /* consmos.jpg in Resources */,
@@ -279,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E55CE71AA2936B00C32DF6 /* UIStoryBoardExtension.swift in Sources */,
 				56E55CAD1AA18D7A00C32DF6 /* ViewController.swift in Sources */,
 				56E55CDE1AA287B400C32DF6 /* EntryDIsplayViewController.swift in Sources */,
+				56E55CE41AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift in Sources */,
 				56E55CAB1AA18D7A00C32DF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
