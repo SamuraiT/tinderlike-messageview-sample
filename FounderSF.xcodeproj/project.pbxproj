@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		069EBA7CF135905943D41900 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D30B4DD8039BDE7A76FFB04 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		565BBF081AA42CFC00462214 /* FounderSF-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FounderSF-Bridging-Header.h"; sourceTree = "<group>"; };
 		56E55CA51AA18D7A00C32DF6 /* FounderSF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FounderSF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E55CA91AA18D7A00C32DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,15 +109,13 @@
 				56E55CD81AA284CC00C32DF6 /* Storyboard */,
 				56E55CD71AA284B500C32DF6 /* Views */,
 				56E55CD21AA26F3B00C32DF6 /* images */,
-				56E55CCD1AA1978E00C32DF6 /* Message */,
-				56E55CCC1AA196D400C32DF6 /* StartupInvestorList */,
-				56E55CCB1AA1967700C32DF6 /* Login */,
 				56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */,
 				56E55CAC1AA18D7A00C32DF6 /* ViewController.swift */,
 				56E55CAE1AA18D7A00C32DF6 /* Main.storyboard */,
 				56E55CB11AA18D7A00C32DF6 /* Images.xcassets */,
 				56E55CB31AA18D7A00C32DF6 /* LaunchScreen.xib */,
 				56E55CA81AA18D7A00C32DF6 /* Supporting Files */,
+				565BBF081AA42CFC00462214 /* FounderSF-Bridging-Header.h */,
 			);
 			path = FounderSF;
 			sourceTree = "<group>";
@@ -152,27 +151,6 @@
 				56E55CDD1AA287B400C32DF6 /* EntryDIsplayViewController.swift */,
 			);
 			path = EntryDisplay;
-			sourceTree = "<group>";
-		};
-		56E55CCB1AA1967700C32DF6 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		56E55CCC1AA196D400C32DF6 /* StartupInvestorList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StartupInvestorList;
-			sourceTree = "<group>";
-		};
-		56E55CCD1AA1978E00C32DF6 /* Message */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Message;
 			sourceTree = "<group>";
 		};
 		56E55CD21AA26F3B00C32DF6 /* images */ = {
@@ -495,6 +473,7 @@
 				INFOPLIST_FILE = FounderSF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/FounderSF-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -506,6 +485,7 @@
 				INFOPLIST_FILE = FounderSF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/FounderSF-Bridging-Header.h";
 			};
 			name = Release;
 		};
