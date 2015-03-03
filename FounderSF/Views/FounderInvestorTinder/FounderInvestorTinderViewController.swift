@@ -57,8 +57,18 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             ),
             options: options
         )
-        let imageURL = NSURL(string: url)
-        swipeView.imageView.image = UIImage(data: NSData(contentsOfURL: imageURL!)!)
+        
+        let personImageView = createPersonImageView(
+            url,
+            personCGRect: CGRect(
+                x: 10.0,
+                y: 10.0,
+                width: swipeViewWidth / 3.0 - 10.0,
+                height: swipeViewHeight / 3.0 - 10.0)
+        )
+        swipeView.insertSubview(personImageView, atIndex: 0)
+        
+        //swipeView.imageView.image = UIImage(data: NSData(contentsOfURL: imageURL!)!)
         return swipeView
     }
     
