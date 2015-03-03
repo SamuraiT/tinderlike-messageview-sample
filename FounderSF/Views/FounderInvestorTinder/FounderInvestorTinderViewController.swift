@@ -62,7 +62,15 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         return swipeView
     }
     
-
+    func createPersonImageView(url: String, personCGRect: CGRect) -> UIImageView{
+        let imageURL = NSURL(string: url)
+        let personImage = UIImage(data: NSData(contentsOfURL: imageURL!)!)
+        let personImageView = UIImageView(frame: personCGRect)
+        personImageView.image = personImage
+        personImageView.layer.cornerRadius = personImageView.frame.size.width / 2;
+        personImageView.clipsToBounds = true
+        return personImageView
+    }
     
     func view(view: UIView!, wasChosenWithDirection direction: MDCSwipeDirection) {
         if (direction == MDCSwipeDirection.Left) {
