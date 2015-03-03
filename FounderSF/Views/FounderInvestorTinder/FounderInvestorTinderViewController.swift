@@ -86,12 +86,16 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
                 width: personImageViewWidth, height: personImageViewHeight)
         )
         swipeView.insertSubview(personImageView, atIndex: 0)
-       
+      
+        let nameLabel_x = personImageViewWidth + 20 as CGFloat
+        let nameLabel_y = 10.0 as CGFloat
+        let nameLabelWidth = swipeViewWidth * 2 / 3 - 20 as CGFloat
+        let nameLabelHeight = 25.0 as CGFloat
         let nameLabel = createNameLabel(
-            "Mark", last: "zuckerberg",
+            firstName , last: lastName,
             nameCGRect: CGRect(
-                x: personImageViewWidth + 20, y: 10.0,
-                width: swipeViewWidth * 2 / 3 - 20, height: 25.0)
+                x: nameLabel_x, y: nameLabel_y,
+                width: nameLabelWidth, height: nameLabelHeight)
         )
         swipeView.insertSubview(nameLabel, atIndex: 0)
       
