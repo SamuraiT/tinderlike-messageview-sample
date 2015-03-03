@@ -57,9 +57,9 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
         options.likedText = "Invest"
-        options.likedColor = UIColor.greenColor()
+        options.likedColor = UIColor.redColor()
         options.nopeText = "Later"
-        options.nopeColor = UIColor.redColor()
+        options.nopeColor = UIColor.blueColor()
 
         //set tinder view's size
         //Since we wanna controll size: make it resizable easily,
@@ -93,9 +93,8 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         let nameLabel_y = 10.0 as CGFloat
         let nameLabelWidth = swipeViewWidth * 2 / 3 - 20 as CGFloat
         let nameLabelHeight = 25.0 as CGFloat
-        let nameLabel = createNameLabel(
-            firstName , last: lastName,
-            nameCGRect: CGRect(
+        let nameLabel = createHeaderLabel("\(firstName) \(lastName)", fontSize: 22,
+            Rectangle: CGRect(
                 x: nameLabel_x, y: nameLabel_y,
                 width: nameLabelWidth, height: nameLabelHeight)
         )
@@ -117,8 +116,8 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         let visionHeader_y = personImageViewHeight + 15
         let visionHeaderWidth = swipeViewWidth
         let visionHeaderHeight = nameLabelHeight
-        let visionHeader = createVisionHeaderLabel(
-            CGRect(x: visionHeader_x, y: visionHeader_y,
+        let visionHeader = createHeaderLabel("Vision", fontSize: 18,
+            Rectangle: CGRect(x: visionHeader_x, y: visionHeader_y,
             width: visionHeaderWidth, height: visionHeaderHeight))
         swipeView.insertSubview(visionHeader, atIndex: 0)
       
@@ -151,13 +150,6 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         return personImageView
     }
     
-    func createNameLabel(first: String, last: String, nameCGRect: CGRect) -> UILabel{
-        let nameLabel = UILabel(frame: nameCGRect)
-        nameLabel.text = "\(first) \(last)"
-        nameLabel.font = UIFont.boldSystemFontOfSize(22)
-        return nameLabel
-    }
-   
     func createProfessionalHeadlineLabel(headline: String, headlineCGRect: CGRect) -> UILabel{
         let headlineLabel = UILabel(frame: headlineCGRect)
         headlineLabel.numberOfLines = 4
@@ -166,21 +158,20 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         return headlineLabel
     }
    
-    func createVisionHeaderLabel(Rectangle: CGRect) -> UILabel{
-        let visionHeader = UILabel(frame: Rectangle)
-        visionHeader.text = "Vision"
-        visionHeader.font = UIFont.boldSystemFontOfSize(18)
-        return visionHeader
-    }
-    
-     func createVisionLabel(vision: String, visionCGRect: CGRect) -> UILabel{
+    func createVisionLabel(vision: String, visionCGRect: CGRect) -> UILabel{
         let visionLabel = UILabel(frame: visionCGRect)
         visionLabel.numberOfLines = 4
         visionLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         visionLabel.text = vision
         return visionLabel
     }
-   
+  
+    func createHeaderLabel(header: String, fontSize: CGFloat, Rectangle: CGRect) -> UILabel{
+        let headerLabel = UILabel(frame: Rectangle)
+        headerLabel.text = header
+        headerLabel.font = UIFont.boldSystemFontOfSize(fontSize)
+        return headerLabel
+    }
     func view(view: UIView!, wasChosenWithDirection direction: MDCSwipeDirection) {
         if (direction == MDCSwipeDirection.Left) {
             println("Later")
