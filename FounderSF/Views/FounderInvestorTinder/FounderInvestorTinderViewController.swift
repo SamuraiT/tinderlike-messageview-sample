@@ -25,7 +25,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             photoURL[0],
             firstName: "Mark", lastName: "zuckerberg",
             professionalHeadlineText: "Founder of Facebook,Software Engineer. founded with Eduardo Luiz Saverin, Chris Hughes...",
-            vision: "",
+            vision: "The mission of Facebook is to all about the sharing and connections that are now ... Get complete information about Facebook's mission and vision, and the 20 ...",
             recommended_by: ""
         )
         self.view.addSubview(swipeView1)
@@ -34,7 +34,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             photoURL[1],
             firstName: "Bill", lastName: "Gates",
             professionalHeadlineText: "business magnate, philanthropist, investor, computer programmer, and inventor",
-            vision: "",
+            vision: "At Microsoft, our mission is to enable people and businesses throughout the world to realize their full potential. We consider our mission statement a commitment ...",
             recommended_by: ""
         )
         self.view.insertSubview(swipeView2, belowSubview: swipeView1)
@@ -43,7 +43,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             photoURL[2],
             firstName: "Larry", lastName: "Page",
             professionalHeadlineText: "computer scientist and internet entrepreneur who cofounded Google Inc. with Sergey Brin, and is ..",
-            vision: "",
+            vision: "Google's mission is to organize the world's information and make it universally accessible and useful. Our company has packed a lot into a relatively young life. Since Google was founded in 1998, we've grown to serve millions of people around the world.",
             recommended_by: ""
         )
         self.view.insertSubview(swipeView3, belowSubview: swipeView2)
@@ -121,7 +121,16 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             CGRect(x: visionHeader_x, y: visionHeader_y,
             width: visionHeaderWidth, height: visionHeaderHeight))
         swipeView.insertSubview(visionHeader, atIndex: 0)
-       
+      
+        let vision_x = personImageView_x
+        let vision_y = visionHeader_y + visionHeaderHeight
+        let visionWidth = swipeViewWidth
+        let visionHeight = personImageViewHeight - visionHeaderHeight
+        let visionLabel = createVisionLabel(vision,
+            visionCGRect: CGRect(x: vision_x, y: vision_y,
+                width: visionWidth, height: visionHeight))
+        swipeView.insertSubview(visionLabel, atIndex: 0)
+      
         
         //swipeView.imageView.image = UIImage(data: NSData(contentsOfURL: imageURL!)!)
         return swipeView
@@ -164,6 +173,13 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         return visionHeader
     }
     
+     func createVisionLabel(vision: String, visionCGRect: CGRect) -> UILabel{
+        let visionLabel = UILabel(frame: visionCGRect)
+        visionLabel.numberOfLines = 4
+        visionLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        visionLabel.text = vision
+        return visionLabel
+    }
    
     func view(view: UIView!, wasChosenWithDirection direction: MDCSwipeDirection) {
         if (direction == MDCSwipeDirection.Left) {
