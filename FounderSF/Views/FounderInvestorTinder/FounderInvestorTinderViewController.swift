@@ -77,12 +77,14 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             options: options
         )
         swipeView.layer.backgroundColor = UIColor.whiteColor().CGColor
+        let personImageView_x = 10.0 as CGFloat
+        let personImageView_y = 10.0 as CGFloat
         let personImageViewWidth = swipeViewWidth / 3.0 - 10.0 as CGFloat
         let personImageViewHeight = swipeViewHeight / 3.0 - 10.0 as CGFloat
         let personImageView = createPersonImageView(
             url,
             personCGRect: CGRect(
-                x: 10.0, y: 10.0,
+                x: personImageView_x, y: personImageView_y,
                 width: personImageViewWidth, height: personImageViewHeight)
         )
         swipeView.insertSubview(personImageView, atIndex: 0)
@@ -110,6 +112,17 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
                 width: headlineLabelWidth, height: headlineLabelHeight)
         )
         swipeView.insertSubview(professionalHeadLine, atIndex: 0)
+        
+        let visionHeader_x = personImageView_x
+        let visionHeader_y = personImageViewHeight + 15
+        let visionHeaderWidth = swipeViewWidth
+        let visionHeaderHeight = nameLabelHeight
+        let visionHeader = createVisionHeaderLabel(
+            CGRect(x: visionHeader_x, y: visionHeader_y,
+            width: visionHeaderWidth, height: visionHeaderHeight))
+        swipeView.insertSubview(visionHeader, atIndex: 0)
+       
+        
         //swipeView.imageView.image = UIImage(data: NSData(contentsOfURL: imageURL!)!)
         return swipeView
     }
@@ -143,7 +156,15 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         headlineLabel.text = headline
         return headlineLabel
     }
+   
+    func createVisionHeaderLabel(Rectangle: CGRect) -> UILabel{
+        let visionHeader = UILabel(frame: Rectangle)
+        visionHeader.text = "Vision"
+        visionHeader.font = UIFont.boldSystemFontOfSize(18)
+        return visionHeader
+    }
     
+   
     func view(view: UIView!, wasChosenWithDirection direction: MDCSwipeDirection) {
         if (direction == MDCSwipeDirection.Left) {
             println("Later")
