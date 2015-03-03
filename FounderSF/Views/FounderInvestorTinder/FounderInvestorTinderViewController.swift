@@ -129,7 +129,16 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             visionCGRect: CGRect(x: vision_x, y: vision_y,
                 width: visionWidth, height: visionHeight))
         swipeView.insertSubview(visionLabel, atIndex: 0)
-      
+        
+        let recommendedLabel_x = personImageView_x
+        let recommendedLabel_y = vision_y + visionHeight + 10
+        let recommendedLabelWidth = swipeViewWidth
+        let recommendedLabelHeight = nameLabelHeight
+        let recommenededLabel = createHeaderLabel("Recommended by",
+            fontSize: 18.0, Rectangle:
+            CGRect(x: recommendedLabel_x, y: recommendedLabel_y,
+                width: recommendedLabelWidth, height: recommendedLabelHeight))
+        swipeView.insertSubview(recommenededLabel, atIndex: 0)
         
         //swipeView.imageView.image = UIImage(data: NSData(contentsOfURL: imageURL!)!)
         return swipeView
