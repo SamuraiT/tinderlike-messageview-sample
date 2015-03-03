@@ -60,7 +60,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         options.likedColor = UIColor.greenColor()
         options.nopeText = "Later"
         options.nopeColor = UIColor.redColor()
-       
+
         //set tinder view's size
         //Since we wanna controll size: make it resizable easily,
         //we set constant variable for each CGRect size
@@ -76,7 +76,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
                 width: swipeViewWidth, height: swipeViewHeight),
             options: options
         )
-      
+        swipeView.layer.backgroundColor = UIColor.whiteColor().CGColor
         let personImageViewWidth = swipeViewWidth / 3.0 - 10.0 as CGFloat
         let personImageViewHeight = swipeViewHeight / 3.0 - 10.0 as CGFloat
         let personImageView = createPersonImageView(
@@ -94,6 +94,18 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
                 width: swipeViewWidth * 2 / 3 - 20, height: 25.0)
         )
         swipeView.insertSubview(nameLabel, atIndex: 0)
+      
+        let headlineLabel_x = nameLabel_x
+        let headlineLabel_y = nameLabelHeight + 5
+        let headlineLabelWidth = nameLabelWidth
+        let headlineLabelHeight = personImageViewHeight - nameLabelHeight - nameLabel_y
+        let professionalHeadLine = createProfessionalHeadlineLabel(
+            professionalHeadlineText,
+            headlineCGRect: CGRect(
+                x: headlineLabel_x, y: headlineLabel_y,
+                width: headlineLabelWidth, height: headlineLabelHeight)
+        )
+        swipeView.insertSubview(professionalHeadLine, atIndex: 0)
         //swipeView.imageView.image = UIImage(data: NSData(contentsOfURL: imageURL!)!)
         return swipeView
     }
@@ -119,8 +131,14 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         nameLabel.font = UIFont.boldSystemFontOfSize(22)
         return nameLabel
     }
-    
-    
+   
+    func createProfessionalHeadlineLabel(headline: String, headlineCGRect: CGRect) -> UILabel{
+        let headlineLabel = UILabel(frame: headlineCGRect)
+        headlineLabel.numberOfLines = 4
+        headlineLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        headlineLabel.text = headline
+        return headlineLabel
+    }
     
     func view(view: UIView!, wasChosenWithDirection direction: MDCSwipeDirection) {
         if (direction == MDCSwipeDirection.Left) {
