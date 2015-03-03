@@ -42,6 +42,8 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         options.nopeColor = UIColor.redColor()
        
         //set tinder view's size
+        //Since we wanna controll size: make it resizable easily,
+        //we set constant variable for each CGRect size
         let swipeViewX = 10 as CGFloat
         let SwipeViewY = 100 as CGFloat
         let swipeViewWidth = self.view.bounds.size.width - 20;
@@ -57,7 +59,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             ),
             options: options
         )
-        
+       
         let personImageView = createPersonImageView(
             url,
             personCGRect: CGRect(
