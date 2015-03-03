@@ -41,14 +41,19 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         options.nopeText = "Later"
         options.nopeColor = UIColor.redColor()
        
+        //set tinder view's size
+        let swipeViewX = 10 as CGFloat
+        let SwipeViewY = 100 as CGFloat
+        let swipeViewWidth = self.view.bounds.size.width - 20;
+        let swipeViewHeight = self.view.bounds.size.height - 300;
         
         //create tinder like view
         let swipeView = MDCSwipeToChooseView(
             frame: CGRect(
-                x: 10,
-                y: 100,
-                width: self.view.bounds.size.width - 20,
-                height: self.view.bounds.size.height - 300
+                x: swipeViewX,
+                y: SwipeViewY,
+                width: swipeViewWidth,
+                height: swipeViewHeight
             ),
             options: options
         )
