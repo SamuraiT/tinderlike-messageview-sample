@@ -93,7 +93,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         let nameLabel_y = 10.0 as CGFloat
         let nameLabelWidth = swipeViewWidth * 2 / 3 - 20 as CGFloat
         let nameLabelHeight = 25.0 as CGFloat
-        let nameLabel = createHeaderLabel("\(firstName) \(lastName)", fontSize: 22,
+        let nameLabel = createCommonHeaderLabel("\(firstName) \(lastName)", fontSize: 22,
             Rectangle: CGRect(
                 x: nameLabel_x, y: nameLabel_y,
                 width: nameLabelWidth, height: nameLabelHeight)
@@ -104,9 +104,9 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         let headlineLabel_y = nameLabelHeight + 5
         let headlineLabelWidth = nameLabelWidth
         let headlineLabelHeight = personImageViewHeight - nameLabelHeight - nameLabel_y
-        let professionalHeadLine = createProfessionalHeadlineLabel(
-            professionalHeadlineText,
-            headlineCGRect: CGRect(
+        let professionalHeadLine = createCommonBodyTextLabel(
+            professionalHeadlineText, numberOfLines: 4,
+            Rectangle: CGRect(
                 x: headlineLabel_x, y: headlineLabel_y,
                 width: headlineLabelWidth, height: headlineLabelHeight)
         )
@@ -116,7 +116,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         let visionHeader_y = personImageViewHeight + 15
         let visionHeaderWidth = swipeViewWidth
         let visionHeaderHeight = nameLabelHeight
-        let visionHeader = createHeaderLabel("Vision", fontSize: 18,
+        let visionHeader = createCommonHeaderLabel("Vision", fontSize: 18,
             Rectangle: CGRect(x: visionHeader_x, y: visionHeader_y,
             width: visionHeaderWidth, height: visionHeaderHeight))
         swipeView.insertSubview(visionHeader, atIndex: 0)
@@ -125,8 +125,9 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         let vision_y = visionHeader_y + visionHeaderHeight
         let visionWidth = swipeViewWidth
         let visionHeight = personImageViewHeight - visionHeaderHeight
-        let visionLabel = createVisionLabel(vision,
-            visionCGRect: CGRect(x: vision_x, y: vision_y,
+        let visionLabel = createCommonBodyTextLabel(
+                vision, numberOfLines: 2,
+                Rectangle:  CGRect(x: vision_x, y: vision_y,
                 width: visionWidth, height: visionHeight))
         swipeView.insertSubview(visionLabel, atIndex: 0)
         
@@ -134,7 +135,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         let recommendedLabel_y = vision_y + visionHeight + 10
         let recommendedLabelWidth = swipeViewWidth
         let recommendedLabelHeight = nameLabelHeight
-        let recommenededLabel = createHeaderLabel("Recommended by",
+        let recommenededLabel = createCommonHeaderLabel("Recommended by",
             fontSize: 18.0, Rectangle:
             CGRect(x: recommendedLabel_x, y: recommendedLabel_y,
                 width: recommendedLabelWidth, height: recommendedLabelHeight))
@@ -159,23 +160,15 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         return personImageView
     }
     
-    func createProfessionalHeadlineLabel(headline: String, headlineCGRect: CGRect) -> UILabel{
-        let headlineLabel = UILabel(frame: headlineCGRect)
-        headlineLabel.numberOfLines = 4
-        headlineLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        headlineLabel.text = headline
-        return headlineLabel
+    func createCommonBodyTextLabel(body: String, numberOfLines: Int, Rectangle: CGRect) -> UILabel{
+        let bodyTextLabel = UILabel(frame: Rectangle)
+        bodyTextLabel.numberOfLines = numberOfLines
+        bodyTextLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        bodyTextLabel.text = body
+        return bodyTextLabel
     }
-   
-    func createVisionLabel(vision: String, visionCGRect: CGRect) -> UILabel{
-        let visionLabel = UILabel(frame: visionCGRect)
-        visionLabel.numberOfLines = 4
-        visionLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        visionLabel.text = vision
-        return visionLabel
-    }
-  
-    func createHeaderLabel(header: String, fontSize: CGFloat, Rectangle: CGRect) -> UILabel{
+
+    func createCommonHeaderLabel(header: String, fontSize: CGFloat, Rectangle: CGRect) -> UILabel{
         let headerLabel = UILabel(frame: Rectangle)
         headerLabel.text = header
         headerLabel.font = UIFont.boldSystemFontOfSize(fontSize)
