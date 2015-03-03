@@ -52,21 +52,16 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         //create tinder like view
         let swipeView = MDCSwipeToChooseView(
             frame: CGRect(
-                x: swipeViewX,
-                y: SwipeViewY,
-                width: swipeViewWidth,
-                height: swipeViewHeight
-            ),
+                x: swipeViewX, y: SwipeViewY,
+                width: swipeViewWidth, height: swipeViewHeight),
             options: options
         )
        
         let personImageView = createPersonImageView(
             url,
             personCGRect: CGRect(
-                x: 10.0,
-                y: 10.0,
-                width: swipeViewWidth / 3.0 - 10.0,
-                height: swipeViewHeight / 3.0 - 10.0)
+                x: 10.0, y: 10.0,
+                width: personImageViewWidth, height: personImageViewHeight)
         )
         swipeView.insertSubview(personImageView, atIndex: 0)
         
@@ -75,9 +70,14 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
     }
     
     func createPersonImageView(url: String, personCGRect: CGRect) -> UIImageView{
-        let imageURL = NSURL(string: url)
-        let personImage = UIImage(data: NSData(contentsOfURL: imageURL!)!)
         let personImageView = UIImageView(frame: personCGRect)
+        let imageURL = NSURL(string: url)
+        var personImage: UIImage?
+        if let imageData = NSData(contentsOfURL: imageURL!){
+            personImage = UIImage(data: imageData)
+        } else {
+            personImage = UIImage(named: "person_placeholder.png")
+        }
         personImageView.image = personImage
         personImageView.layer.cornerRadius = personImageView.frame.size.width / 2;
         personImageView.clipsToBounds = true
