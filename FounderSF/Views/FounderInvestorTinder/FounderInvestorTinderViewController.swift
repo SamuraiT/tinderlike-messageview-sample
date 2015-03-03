@@ -21,18 +21,38 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let swipeView1 = createSwipeView(photoURL[0])
+        let swipeView1 = createSwipeView(
+            photoURL[0],
+            firstName: "Mark", lastName: "zuckerberg",
+            professionalHeadlineText: "Founder of Facebook,Software Engineer. founded with Eduardo Luiz Saverin, Chris Hughes...",
+            vision: "",
+            recommended_by: ""
+        )
         self.view.addSubview(swipeView1)
-        let title = UILabel(frame: CGRect(x: 10, y: 100, width: 310, height: 44))
         
-        let swipeView2 = createSwipeView(photoURL[1])
+        let swipeView2 = createSwipeView(
+            photoURL[1],
+            firstName: "Bill", lastName: "Gates",
+            professionalHeadlineText: "business magnate, philanthropist, investor, computer programmer, and inventor",
+            vision: "",
+            recommended_by: ""
+        )
         self.view.insertSubview(swipeView2, belowSubview: swipeView1)
         
-        let swipeView3 = createSwipeView(photoURL[2])
+        let swipeView3 = createSwipeView(
+            photoURL[2],
+            firstName: "Larry", lastName: "Page",
+            professionalHeadlineText: "computer scientist and internet entrepreneur who cofounded Google Inc. with Sergey Brin, and is ..",
+            vision: "",
+            recommended_by: ""
+        )
         self.view.insertSubview(swipeView3, belowSubview: swipeView2)
     }
     
-    func createSwipeView(url: String) -> UIView {
+    func createSwipeView(
+            url: String, firstName: String, lastName: String,
+            professionalHeadlineText: String, vision: String,
+            recommended_by: AnyObject) -> UIView {
         //set option for Swipe View
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
