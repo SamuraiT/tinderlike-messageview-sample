@@ -56,7 +56,9 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
                 width: swipeViewWidth, height: swipeViewHeight),
             options: options
         )
-       
+      
+        let personImageViewWidth = swipeViewWidth / 3.0 - 10.0 as CGFloat
+        let personImageViewHeight = swipeViewHeight / 3.0 - 10.0 as CGFloat
         let personImageView = createPersonImageView(
             url,
             personCGRect: CGRect(
@@ -64,7 +66,14 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
                 width: personImageViewWidth, height: personImageViewHeight)
         )
         swipeView.insertSubview(personImageView, atIndex: 0)
-        
+       
+        let nameLabel = createNameLabel(
+            "Mark", last: "zuckerberg",
+            nameCGRect: CGRect(
+                x: personImageViewWidth + 20, y: 10.0,
+                width: swipeViewWidth * 2 / 3 - 20, height: 25.0)
+        )
+        swipeView.insertSubview(nameLabel, atIndex: 0)
         //swipeView.imageView.image = UIImage(data: NSData(contentsOfURL: imageURL!)!)
         return swipeView
     }
@@ -83,6 +92,15 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         personImageView.clipsToBounds = true
         return personImageView
     }
+    
+    func createNameLabel(first: String, last: String, nameCGRect: CGRect) -> UILabel{
+        let nameLabel = UILabel(frame: nameCGRect)
+        nameLabel.text = "\(first) \(last)"
+        nameLabel.font = UIFont.boldSystemFontOfSize(22)
+        return nameLabel
+    }
+    
+    
     
     func view(view: UIView!, wasChosenWithDirection direction: MDCSwipeDirection) {
         if (direction == MDCSwipeDirection.Left) {
