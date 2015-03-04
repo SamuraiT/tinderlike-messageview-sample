@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
+class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
     
     @IBOutlet weak var tinderView: UIImageView!
     var swipeCount = 0

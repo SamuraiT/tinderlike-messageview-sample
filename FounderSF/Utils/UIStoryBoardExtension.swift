@@ -14,7 +14,7 @@ extension UIStoryboard {
     }
     
     class func presentFounderInvestorTinderView(selfView: UIViewController) {
-        moveTo("FounderInvestorTinder", storyboardID: "FounderInvestorTinderViewController", view: selfView)
+        moveTo("FounderInvestorTinder", storyboardID: "FounderTinderViewController", view: selfView)
     }
     
     
