@@ -30,7 +30,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
     }
     
     override func viewWillAppear(animated: Bool) {
-        let swipeView1 = createSwipeView(
+        let swipeView1 = createSwipeViewForFounder(
             photoURL[0],
             firstName: "Mark", lastName: "zuckerberg",
             professionalHeadlineText: "Founder of Facebook,Software Engineer. founded with Eduardo Luiz Saverin, Chris Hughes...",
@@ -39,7 +39,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         )
         self.view.addSubview(swipeView1)
         
-        let swipeView2 = createSwipeView(
+        let swipeView2 = createSwipeViewForFounder(
             photoURL[1],
             firstName: "Bill", lastName: "Gates",
             professionalHeadlineText: "business magnate, philanthropist, investor, computer programmer, and inventor",
@@ -48,7 +48,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         )
         self.view.insertSubview(swipeView2, belowSubview: swipeView1)
         
-        let swipeView3 = createSwipeView(
+        let swipeView3 = createSwipeViewForFounder(
             photoURL[2],
             firstName: "Larry", lastName: "Page",
             professionalHeadlineText: "computer scientist and internet entrepreneur who cofounded Google Inc. with Sergey Brin, and is ..",
@@ -57,12 +57,11 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         )
         self.view.insertSubview(swipeView3, belowSubview: swipeView2)
     }
-    
-    func createSwipeView(
-            url: String, firstName: String, lastName: String,
-            professionalHeadlineText: String, vision: String,
-            recommenders: Array<String>) -> UIView {
-        //set option for Swipe View
+ 
+    /**
+    create baisc balnk tinder like swipve view
+    */
+    func createBaiscSwipeView(Rectangle: CGRect) -> MDCSwipeToChooseView{
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
         options.likedText = "Invest"
@@ -70,92 +69,133 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         options.nopeText = "Later"
         options.nopeColor = UIColor.blueColor()
 
+        //create tinder like view
+        let swipeView = MDCSwipeToChooseView(
+            frame: Rectangle,
+            options: options
+        )
+        swipeView.layer.backgroundColor = UIColor.whiteColor().CGColor
+        return swipeView
+    }
+
+    /**
+    create swipe view for investor which founders will appear
+    HACK: this func should be refactored
+    */
+    func createSwipeViewForFounder(
+            url: String, firstName: String, lastName: String,
+            professionalHeadlineText: String, vision: String,
+            recommenders: Array<String>) -> UIView {
         //set tinder view's size
         //Since we wanna controll size: make it resizable easily,
         //we set constant variable for each CGRect size
         let swipeViewX = 10 as CGFloat
-        let SwipeViewY = 100 as CGFloat
+        let swipeViewY = 100 as CGFloat
         let swipeViewWidth = self.view.bounds.size.width - 20;
         let swipeViewHeight = self.view.bounds.size.height - 300;
-        
-        //create tinder like view
-        let swipeView = MDCSwipeToChooseView(
-            frame: CGRect(
-                x: swipeViewX, y: SwipeViewY,
-                width: swipeViewWidth, height: swipeViewHeight),
-            options: options
+        let CGRectForSwipeView = CGRect(
+                x: swipeViewX, y: swipeViewY,
+                width: swipeViewWidth, height: swipeViewHeight
         )
-        swipeView.layer.backgroundColor = UIColor.whiteColor().CGColor
+        let swipeView = createBaiscSwipeView(CGRectForSwipeView)
+                
         let personImageView_x = 10.0 as CGFloat
         let personImageView_y = 10.0 as CGFloat
         let personImageViewWidth = swipeViewWidth / 3.0 - 10.0 as CGFloat
         let personImageViewHeight = swipeViewHeight / 3.0 - 10.0 as CGFloat
+        let CGRectForPersonImageView = CGRect(
+                x: personImageView_x, y: personImageView_y,
+                width: personImageViewWidth, height: personImageViewHeight
+        )
         let personImageView = createPersonImageView(
             url,
-            personCGRect: CGRect(
-                x: personImageView_x, y: personImageView_y,
-                width: personImageViewWidth, height: personImageViewHeight)
+            personCGRect: CGRectForPersonImageView
         )
-        swipeView.insertSubview(personImageView, atIndex: 0)
       
         let nameLabel_x = personImageViewWidth + 20 as CGFloat
         let nameLabel_y = 10.0 as CGFloat
         let nameLabelWidth = swipeViewWidth * 2 / 3 - 20 as CGFloat
         let nameLabelHeight = 25.0 as CGFloat
-        let nameLabel = createCommonHeaderLabel("\(firstName) \(lastName)", fontSize: 22,
-            Rectangle: CGRect(
+        let CGRectForNameLabel = CGRect(
                 x: nameLabel_x, y: nameLabel_y,
-                width: nameLabelWidth, height: nameLabelHeight)
+                width: nameLabelWidth, height: nameLabelHeight
         )
-        swipeView.insertSubview(nameLabel, atIndex: 0)
+        let nameLabel = createCommonHeaderLabel(
+            "\(firstName) \(lastName)", fontSize: 22,
+            Rectangle: CGRectForNameLabel
+        )
       
         let headlineLabel_x = nameLabel_x
         let headlineLabel_y = nameLabelHeight + 5
         let headlineLabelWidth = nameLabelWidth
         let headlineLabelHeight = personImageViewHeight - nameLabelHeight - nameLabel_y
+        let CGRectForProfessionalHeadline = CGRect(
+                x: headlineLabel_x, y: headlineLabel_y,
+                width: headlineLabelWidth, height: headlineLabelHeight
+        )
         let professionalHeadLine = createCommonBodyTextLabel(
             professionalHeadlineText, numberOfLines: 4,
-            Rectangle: CGRect(
-                x: headlineLabel_x, y: headlineLabel_y,
-                width: headlineLabelWidth, height: headlineLabelHeight)
+            Rectangle: CGRectForProfessionalHeadline
         )
-        swipeView.insertSubview(professionalHeadLine, atIndex: 0)
         
         let visionHeader_x = personImageView_x
         let visionHeader_y = personImageViewHeight + 10
         let visionHeaderWidth = swipeViewWidth
         let visionHeaderHeight = nameLabelHeight
-        let visionHeader = createCommonHeaderLabel("Vision", fontSize: 18,
-            Rectangle: CGRect(x: visionHeader_x, y: visionHeader_y,
-            width: visionHeaderWidth, height: visionHeaderHeight))
-        swipeView.insertSubview(visionHeader, atIndex: 0)
+        let CGRectForVisionHeader = CGRect(
+            x: visionHeader_x, y: visionHeader_y,
+            width: visionHeaderWidth, height: visionHeaderHeight
+        )
+        let visionHeader = createCommonHeaderLabel(
+            "Vision", fontSize: 18,
+            Rectangle: CGRectForVisionHeader
+        )
       
         let vision_x = personImageView_x
         let vision_y = visionHeader_y + visionHeaderHeight
         let visionWidth = swipeViewWidth
         let visionHeight = personImageViewHeight - visionHeaderHeight - 10
+        let CGRectForVision = CGRect(
+                x: vision_x, y: vision_y,
+                width: visionWidth, height: visionHeight
+        )
         let visionLabel = createCommonBodyTextLabel(
                 vision, numberOfLines: 2,
-                Rectangle:  CGRect(x: vision_x, y: vision_y,
-                width: visionWidth, height: visionHeight))
-        swipeView.insertSubview(visionLabel, atIndex: 0)
+                Rectangle: CGRectForVision
+        )
         
         let recommendedLabel_x = personImageView_x
         let recommendedLabel_y = vision_y + visionHeight
         let recommendedLabelWidth = swipeViewWidth
         let recommendedLabelHeight = nameLabelHeight
-        let recommenededLabel = createCommonHeaderLabel("Recommended by",
-            fontSize: 18.0, Rectangle:
-            CGRect(x: recommendedLabel_x, y: recommendedLabel_y,
-                width: recommendedLabelWidth, height: recommendedLabelHeight))
-        swipeView.insertSubview(recommenededLabel, atIndex: 0)
+        let CGRectForRecommendedLabel = CGRect(
+                x: recommendedLabel_x, y: recommendedLabel_y,
+                width: recommendedLabelWidth, height: recommendedLabelHeight
+        )
+        let recommenededLabel = createCommonHeaderLabel(
+            "Recommended by",
+            fontSize: 18.0, Rectangle:CGRectForRecommendedLabel
+        )
        
         let recommender_x = personImageView_x
         let recommender_y = recommendedLabel_y + recommendedLabelHeight + 10
         let recommenderWidth = swipeViewWidth
         let recommenderHeight = personImageViewHeight - recommendedLabelHeight - 10
+        let CGRectForRecommender = CGRect(
+            x: recommender_x, y: recommender_y,
+            width: recommenderWidth, height: recommenderHeight
+        )
         let recommenderImageViews = createRecommenderImageView(recommenders,
-            Rectangle: CGRect(x: recommender_x, y: recommender_y, width: recommenderWidth, height: recommenderHeight))
+            Rectangle: CGRectForRecommender
+        )
+        
+        
+        swipeView.insertSubview(personImageView, atIndex: 0)
+        swipeView.insertSubview(nameLabel, atIndex: 0)
+        swipeView.insertSubview(professionalHeadLine, atIndex: 0)
+        swipeView.insertSubview(visionHeader, atIndex: 0)
+        swipeView.insertSubview(visionLabel, atIndex: 0)
+        swipeView.insertSubview(recommenededLabel, atIndex: 0)
         for recommenderImageView in recommenderImageViews{
             swipeView.insertSubview(recommenderImageView, atIndex: 0)
         }
