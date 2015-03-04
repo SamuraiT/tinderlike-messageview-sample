@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-1253" y="-8"/>
         </scene>
-        <!--Founder Investor Tinder View Controller-->
+        <!--Founder Tinder View Controller-->
         <scene sceneID="KL2-8D-3Q6">
             <objects>
-                <viewController storyboardIdentifier="FounderInvestorTinderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pgy-Bp-caS" customClass="FounderInvestorTinderViewController" customModule="FounderSF" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FounderTinderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pgy-Bp-caS" customClass="FounderTinderViewController" customModule="FounderSF" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cBN-SP-Kdw"/>
                         <viewControllerLayoutGuide type="bottom" id="B14-fA-xML"/>

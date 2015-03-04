@@ -46,7 +46,7 @@ class EntryDisplayViewController: UIViewController {
     }
     
     @IBAction func investorTapped(sender: AnyObject) {
-      UIStoryboard.presentFounderInvestorTinderView(self)
+      UIStoryboard.presentFounderTinderView(self)
     }
 
 }
