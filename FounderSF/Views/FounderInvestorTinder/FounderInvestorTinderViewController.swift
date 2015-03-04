@@ -12,17 +12,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
     
     @IBOutlet weak var tinderView: UIImageView!
     var swipeCount = 0
-    var photoURL = [
-        "http://static.guim.co.uk/sys-images/Technology/Pix/pictures/2007/07/27/facebook-ap-1.jpg",
-        "http://t0.gstatic.com/images?q=tbn:ANd9GcToGNSEs_d2aNZQAiaoXTorLMmHaFipqDdA-qGS6dzoraOxij8u3Q",
-        "http://static.guim.co.uk/sys-images/Business/Pix/pictures/2007/12/10/page460276.jpg",
-    ]
-    
-    var recommendersURL = [
-        "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTmZ-X3fvLI6UTFGQjYrCdC036Fx-FJwzWdF0CjhA-nZzIqvY8m6Q",
-        "http://ia.media-imdb.com/images/M/MV5BOTY3NjU3OTY1NV5BMl5BanBnXkFtZTcwNjI3Mjc4MQ@@._V1_SY98_CR1,0,67,98_AL_.jpg",
-        "http://investcorrectly.com/wp-content/uploads/2015/03/billackman.jpg",
-    ]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +20,18 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
     }
     
     override func viewWillAppear(animated: Bool) {
+        var photoURL = [
+            "http://static.guim.co.uk/sys-images/Technology/Pix/pictures/2007/07/27/facebook-ap-1.jpg",
+            "http://t0.gstatic.com/images?q=tbn:ANd9GcToGNSEs_d2aNZQAiaoXTorLMmHaFipqDdA-qGS6dzoraOxij8u3Q",
+            "http://static.guim.co.uk/sys-images/Business/Pix/pictures/2007/12/10/page460276.jpg",
+        ]
+        
+        var recommendersURL = [
+            "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTmZ-X3fvLI6UTFGQjYrCdC036Fx-FJwzWdF0CjhA-nZzIqvY8m6Q",
+            "http://ia.media-imdb.com/images/M/MV5BOTY3NjU3OTY1NV5BMl5BanBnXkFtZTcwNjI3Mjc4MQ@@._V1_SY98_CR1,0,67,98_AL_.jpg",
+            "http://investcorrectly.com/wp-content/uploads/2015/03/billackman.jpg",
+        ]
+        
         let swipeView1 = createSwipeViewForFounder(
             photoURL[0],
             firstName: "Mark", lastName: "zuckerberg",
@@ -62,13 +64,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
     create baisc balnk tinder like swipve view
     */
     func createBaiscSwipeView(Rectangle: CGRect) -> MDCSwipeToChooseView{
-        let options = MDCSwipeToChooseViewOptions()
-        options.delegate = self
-        options.likedText = "Invest"
-        options.likedColor = UIColor.redColor()
-        options.nopeText = "Later"
-        options.nopeColor = UIColor.blueColor()
-
+        let options = setSwipeViewOptions()
         //create tinder like view
         let swipeView = MDCSwipeToChooseView(
             frame: Rectangle,
@@ -76,6 +72,16 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         )
         swipeView.layer.backgroundColor = UIColor.whiteColor().CGColor
         return swipeView
+    }
+    
+    func setSwipeViewOptions() -> MDCSwipeToChooseViewOptions{
+        let options = MDCSwipeToChooseViewOptions()
+        options.delegate = self
+        options.likedText = "Invest"
+        options.likedColor = UIColor.redColor()
+        options.nopeText = "Later"
+        options.nopeColor = UIColor.blueColor()
+        return options
     }
 
     /**
