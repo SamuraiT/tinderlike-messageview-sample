@@ -52,7 +52,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
     func createSwipeView(
             url: String, firstName: String, lastName: String,
             professionalHeadlineText: String, vision: String,
-            recommended_by: AnyObject) -> UIView {
+            recommenders: Array<String>) -> UIView {
         //set option for Swipe View
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
@@ -140,8 +140,16 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             CGRect(x: recommendedLabel_x, y: recommendedLabel_y,
                 width: recommendedLabelWidth, height: recommendedLabelHeight))
         swipeView.insertSubview(recommenededLabel, atIndex: 0)
-        
-        //swipeView.imageView.image = UIImage(data: NSData(contentsOfURL: imageURL!)!)
+       
+        let recommender_x = personImageView_x
+        let recommender_y = recommendedLabel_y + recommendedLabelHeight + 10
+        let recommenderWidth = swipeViewWidth
+        let recommenderHeight = personImageViewHeight - recommendedLabelHeight - 10
+        let recommenderImageViews = createRecommenderImageView(recommenders,
+            Rectangle: CGRect(x: recommender_x, y: recommender_y, width: recommenderWidth, height: recommenderHeight))
+        for recommenderImageView in recommenderImageViews{
+            swipeView.insertSubview(recommenderImageView, atIndex: 0)
+        }
         return swipeView
     }
     
@@ -173,6 +181,27 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         headerLabel.text = header
         headerLabel.font = UIFont.boldSystemFontOfSize(fontSize)
         return headerLabel
+    }
+    
+    func createRecommenderImageView(recommenders: Array<String>, Rectangle: CGRect) -> Array<UIImageView>{
+        var recommenderImageViews = [UIImageView]()
+        var x = Rectangle.minX
+        var y = Rectangle.minY
+        var width = Rectangle.width / 6
+        if recommenders.count > 6 {
+            width = Rectangle.width / CGFloat(recommenders.count)
+        }
+        
+        var height = width // for drawing circle Image the frame should be square
+        
+        for recommender in recommenders{
+            recommenderImageViews.append(
+                createPersonImageView(recommender,
+                personCGRect: CGRect(x: x, y: y, width: width, height: height))
+            )
+            x += width + 10
+        }
+        return recommenderImageViews
     }
     func view(view: UIView!, wasChosenWithDirection direction: MDCSwipeDirection) {
         if (direction == MDCSwipeDirection.Left) {
