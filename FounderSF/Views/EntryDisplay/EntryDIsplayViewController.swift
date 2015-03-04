@@ -42,7 +42,7 @@ class EntryDisplayViewController: UIViewController {
     }
     
     @IBAction func founderTapped(sender: AnyObject) {
-        UIStoryboard.presentFounderInvestorTinderNavigationView(self)
+        UIStoryboard.presentInvestorTinderView(self)
     }
     
     @IBAction func investorTapped(sender: AnyObject) {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		565BBF0C1AA57B9D00462214 /* person_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 565BBF0B1AA57B9D00462214 /* person_placeholder.png */; };
+		565BBF0E1AA6B07600462214 /* InvestorTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */; };
+		565BBF101AA6B1CC00462214 /* InvestorTinder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565BBF0F1AA6B1CC00462214 /* InvestorTinder.storyboard */; };
 		56E55CAB1AA18D7A00C32DF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */; };
 		56E55CAD1AA18D7A00C32DF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CAC1AA18D7A00C32DF6 /* ViewController.swift */; };
 		56E55CB01AA18D7A00C32DF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CAE1AA18D7A00C32DF6 /* Main.storyboard */; };
@@ -17,8 +19,8 @@
 		56E55CD61AA2719D00C32DF6 /* consmos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CD51AA2719D00C32DF6 /* consmos.jpg */; };
 		56E55CDA1AA2875100C32DF6 /* EntryDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CD91AA2875100C32DF6 /* EntryDisplay.storyboard */; };
 		56E55CDE1AA287B400C32DF6 /* EntryDIsplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CDD1AA287B400C32DF6 /* EntryDIsplayViewController.swift */; };
-		56E55CE11AA2895100C32DF6 /* FounderInvestorTinder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CE01AA2895100C32DF6 /* FounderInvestorTinder.storyboard */; };
-		56E55CE41AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CE31AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift */; };
+		56E55CE11AA2895100C32DF6 /* FounderTinder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CE01AA2895100C32DF6 /* FounderTinder.storyboard */; };
+		56E55CE41AA2899A00C32DF6 /* FounderTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CE31AA2899A00C32DF6 /* FounderTinderViewController.swift */; };
 		56E55CE71AA2936B00C32DF6 /* UIStoryBoardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CE61AA2936B00C32DF6 /* UIStoryBoardExtension.swift */; };
 		E92114AD6D92D7BA0D90E05D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EBA7CF135905943D41900 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		4D30B4DD8039BDE7A76FFB04 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		565BBF081AA42CFC00462214 /* FounderSF-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FounderSF-Bridging-Header.h"; sourceTree = "<group>"; };
 		565BBF0B1AA57B9D00462214 /* person_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person_placeholder.png; sourceTree = "<group>"; };
+		565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestorTinderViewController.swift; sourceTree = "<group>"; };
+		565BBF0F1AA6B1CC00462214 /* InvestorTinder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InvestorTinder.storyboard; sourceTree = "<group>"; };
 		56E55CA51AA18D7A00C32DF6 /* FounderSF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FounderSF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E55CA91AA18D7A00C32DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +55,8 @@
 		56E55CD51AA2719D00C32DF6 /* consmos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = consmos.jpg; sourceTree = "<group>"; };
 		56E55CD91AA2875100C32DF6 /* EntryDisplay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntryDisplay.storyboard; sourceTree = "<group>"; };
 		56E55CDD1AA287B400C32DF6 /* EntryDIsplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDIsplayViewController.swift; sourceTree = "<group>"; };
-		56E55CE01AA2895100C32DF6 /* FounderInvestorTinder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FounderInvestorTinder.storyboard; sourceTree = "<group>"; };
-		56E55CE31AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FounderInvestorTinderViewController.swift; sourceTree = "<group>"; };
+		56E55CE01AA2895100C32DF6 /* FounderTinder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FounderTinder.storyboard; sourceTree = "<group>"; };
+		56E55CE31AA2899A00C32DF6 /* FounderTinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FounderTinderViewController.swift; sourceTree = "<group>"; };
 		56E55CE61AA2936B00C32DF6 /* UIStoryBoardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryBoardExtension.swift; sourceTree = "<group>"; };
 		ABA8203E7220B7D73EE51383 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,7 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				56E55CD91AA2875100C32DF6 /* EntryDisplay.storyboard */,
-				56E55CE01AA2895100C32DF6 /* FounderInvestorTinder.storyboard */,
+				56E55CE01AA2895100C32DF6 /* FounderTinder.storyboard */,
+				565BBF0F1AA6B1CC00462214 /* InvestorTinder.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -185,7 +190,8 @@
 		56E55CE21AA2895E00C32DF6 /* FounderInvestorTinder */ = {
 			isa = PBXGroup;
 			children = (
-				56E55CE31AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift */,
+				56E55CE31AA2899A00C32DF6 /* FounderTinderViewController.swift */,
+				565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */,
 			);
 			path = FounderInvestorTinder;
 			sourceTree = "<group>";
@@ -289,9 +295,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565BBF101AA6B1CC00462214 /* InvestorTinder.storyboard in Resources */,
 				56E55CB01AA18D7A00C32DF6 /* Main.storyboard in Resources */,
 				56E55CB51AA18D7A00C32DF6 /* LaunchScreen.xib in Resources */,
-				56E55CE11AA2895100C32DF6 /* FounderInvestorTinder.storyboard in Resources */,
+				56E55CE11AA2895100C32DF6 /* FounderTinder.storyboard in Resources */,
 				56E55CDA1AA2875100C32DF6 /* EntryDisplay.storyboard in Resources */,
 				56E55CB21AA18D7A00C32DF6 /* Images.xcassets in Resources */,
 				56E55CD61AA2719D00C32DF6 /* consmos.jpg in Resources */,
@@ -347,9 +354,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E55CE71AA2936B00C32DF6 /* UIStoryBoardExtension.swift in Sources */,
+				565BBF0E1AA6B07600462214 /* InvestorTinderViewController.swift in Sources */,
 				56E55CAD1AA18D7A00C32DF6 /* ViewController.swift in Sources */,
 				56E55CDE1AA287B400C32DF6 /* EntryDIsplayViewController.swift in Sources */,
-				56E55CE41AA2899A00C32DF6 /* FounderInvestorTinderViewController.swift in Sources */,
+				56E55CE41AA2899A00C32DF6 /* FounderTinderViewController.swift in Sources */,
 				56E55CAB1AA18D7A00C32DF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,11 @@ extension UIStoryboard {
     class func presentFounderTinderNavigationView(selfView: UIViewController) {
         //FIX
         //when move to navigation controller, view will be blacked out
-        moveTo("FounderInvestorTinder", storyboardID: "FounderInvestorTinderNavigationController", view: selfView)
+        moveTo("FounderTinder", storyboardID: "FounderInvestorTinderNavigationController", view: selfView)
+    }
+    
+    class func presentInvestorTinderView(selfView: UIViewController){
+      moveTo("InvestorTinder", storyboardID: "InvestorTinderViewController", view: selfView)
     }
   
     class func moveTo(storyboardName:String, storyboardID:String, view:UIViewController){
