@@ -18,15 +18,24 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         "http://static.guim.co.uk/sys-images/Business/Pix/pictures/2007/12/10/page460276.jpg",
     ]
     
+    var recommendersURL = [
+        "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTmZ-X3fvLI6UTFGQjYrCdC036Fx-FJwzWdF0CjhA-nZzIqvY8m6Q",
+        "http://ia.media-imdb.com/images/M/MV5BOTY3NjU3OTY1NV5BMl5BanBnXkFtZTcwNjI3Mjc4MQ@@._V1_SY98_CR1,0,67,98_AL_.jpg",
+        "http://investcorrectly.com/wp-content/uploads/2015/03/billackman.jpg",
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         let swipeView1 = createSwipeView(
             photoURL[0],
             firstName: "Mark", lastName: "zuckerberg",
             professionalHeadlineText: "Founder of Facebook,Software Engineer. founded with Eduardo Luiz Saverin, Chris Hughes...",
             vision: "The mission of Facebook is to all about the sharing and connections that are now ... Get complete information about Facebook's mission and vision, and the 20 ...",
-            recommended_by: ""
+            recommenders: recommendersURL
         )
         self.view.addSubview(swipeView1)
         
@@ -35,7 +44,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             firstName: "Bill", lastName: "Gates",
             professionalHeadlineText: "business magnate, philanthropist, investor, computer programmer, and inventor",
             vision: "At Microsoft, our mission is to enable people and businesses throughout the world to realize their full potential. We consider our mission statement a commitment ...",
-            recommended_by: ""
+            recommenders: recommendersURL
         )
         self.view.insertSubview(swipeView2, belowSubview: swipeView1)
         
@@ -44,7 +53,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
             firstName: "Larry", lastName: "Page",
             professionalHeadlineText: "computer scientist and internet entrepreneur who cofounded Google Inc. with Sergey Brin, and is ..",
             vision: "Google's mission is to organize the world's information and make it universally accessible and useful. Our company has packed a lot into a relatively young life. Since Google was founded in 1998, we've grown to serve millions of people around the world.",
-            recommended_by: ""
+            recommenders: recommendersURL
         )
         self.view.insertSubview(swipeView3, belowSubview: swipeView2)
     }
@@ -113,7 +122,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         swipeView.insertSubview(professionalHeadLine, atIndex: 0)
         
         let visionHeader_x = personImageView_x
-        let visionHeader_y = personImageViewHeight + 15
+        let visionHeader_y = personImageViewHeight + 10
         let visionHeaderWidth = swipeViewWidth
         let visionHeaderHeight = nameLabelHeight
         let visionHeader = createCommonHeaderLabel("Vision", fontSize: 18,
@@ -124,7 +133,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         let vision_x = personImageView_x
         let vision_y = visionHeader_y + visionHeaderHeight
         let visionWidth = swipeViewWidth
-        let visionHeight = personImageViewHeight - visionHeaderHeight
+        let visionHeight = personImageViewHeight - visionHeaderHeight - 10
         let visionLabel = createCommonBodyTextLabel(
                 vision, numberOfLines: 2,
                 Rectangle:  CGRect(x: vision_x, y: vision_y,
@@ -132,7 +141,7 @@ class FounderInvestorTinderViewController: UIViewController, MDCSwipeToChooseDel
         swipeView.insertSubview(visionLabel, atIndex: 0)
         
         let recommendedLabel_x = personImageView_x
-        let recommendedLabel_y = vision_y + visionHeight + 10
+        let recommendedLabel_y = vision_y + visionHeight
         let recommendedLabelWidth = swipeViewWidth
         let recommendedLabelHeight = nameLabelHeight
         let recommenededLabel = createCommonHeaderLabel("Recommended by",
