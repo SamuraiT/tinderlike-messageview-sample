@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="tyI-iC-wjW">
+            <objects>
+                <navigationController storyboardIdentifier="FounderInvestorTinderNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BiS-Xw-xZU" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JEV-GP-0rQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Pgy-Bp-caS" kind="presentation" id="qn3-x2-NpZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpA-R4-vkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1253" y="-8"/>
+        </scene>
+        <!--Founder Tinder View Controller-->
+        <scene sceneID="KL2-8D-3Q6">
+            <objects>
+                <viewController storyboardIdentifier="FounderTinderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pgy-Bp-caS" customClass="FounderTinderViewController" customModule="FounderSF" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cBN-SP-Kdw"/>
+                        <viewControllerLayoutGuide type="bottom" id="B14-fA-xML"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ps-9v-1Bl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cB5-bz-4fG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-604" y="-9"/>
+        </scene>
+    </scenes>
+</document>

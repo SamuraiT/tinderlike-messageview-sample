@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565BBF0C1AA57B9D00462214 /* person_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 565BBF0B1AA57B9D00462214 /* person_placeholder.png */; };
+		565BBF0E1AA6B07600462214 /* InvestorTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */; };
+		565BBF101AA6B1CC00462214 /* InvestorTinder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565BBF0F1AA6B1CC00462214 /* InvestorTinder.storyboard */; };
 		56E55CAB1AA18D7A00C32DF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */; };
 		56E55CAD1AA18D7A00C32DF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CAC1AA18D7A00C32DF6 /* ViewController.swift */; };
 		56E55CB01AA18D7A00C32DF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CAE1AA18D7A00C32DF6 /* Main.storyboard */; };
@@ -16,6 +19,10 @@
 		56E55CD61AA2719D00C32DF6 /* consmos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CD51AA2719D00C32DF6 /* consmos.jpg */; };
 		56E55CDA1AA2875100C32DF6 /* EntryDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CD91AA2875100C32DF6 /* EntryDisplay.storyboard */; };
 		56E55CDE1AA287B400C32DF6 /* EntryDIsplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CDD1AA287B400C32DF6 /* EntryDIsplayViewController.swift */; };
+		56E55CE11AA2895100C32DF6 /* FounderTinder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CE01AA2895100C32DF6 /* FounderTinder.storyboard */; };
+		56E55CE41AA2899A00C32DF6 /* FounderTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CE31AA2899A00C32DF6 /* FounderTinderViewController.swift */; };
+		56E55CE71AA2936B00C32DF6 /* UIStoryBoardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CE61AA2936B00C32DF6 /* UIStoryBoardExtension.swift */; };
+		E92114AD6D92D7BA0D90E05D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EBA7CF135905943D41900 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		069EBA7CF135905943D41900 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D30B4DD8039BDE7A76FFB04 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		565BBF081AA42CFC00462214 /* FounderSF-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FounderSF-Bridging-Header.h"; sourceTree = "<group>"; };
+		565BBF0B1AA57B9D00462214 /* person_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person_placeholder.png; sourceTree = "<group>"; };
+		565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestorTinderViewController.swift; sourceTree = "<group>"; };
+		565BBF0F1AA6B1CC00462214 /* InvestorTinder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InvestorTinder.storyboard; sourceTree = "<group>"; };
 		56E55CA51AA18D7A00C32DF6 /* FounderSF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FounderSF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E55CA91AA18D7A00C32DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +55,10 @@
 		56E55CD51AA2719D00C32DF6 /* consmos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = consmos.jpg; sourceTree = "<group>"; };
 		56E55CD91AA2875100C32DF6 /* EntryDisplay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EntryDisplay.storyboard; sourceTree = "<group>"; };
 		56E55CDD1AA287B400C32DF6 /* EntryDIsplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDIsplayViewController.swift; sourceTree = "<group>"; };
+		56E55CE01AA2895100C32DF6 /* FounderTinder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FounderTinder.storyboard; sourceTree = "<group>"; };
+		56E55CE31AA2899A00C32DF6 /* FounderTinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FounderTinderViewController.swift; sourceTree = "<group>"; };
+		56E55CE61AA2936B00C32DF6 /* UIStoryBoardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryBoardExtension.swift; sourceTree = "<group>"; };
+		ABA8203E7220B7D73EE51383 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92114AD6D92D7BA0D90E05D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BECED692104F68DB3F5276D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				069EBA7CF135905943D41900 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56E55C9C1AA18D7A00C32DF6 = {
 			isa = PBXGroup;
 			children = (
 				56E55CA71AA18D7A00C32DF6 /* FounderSF */,
 				56E55CBD1AA18D7B00C32DF6 /* FounderSFTests */,
 				56E55CA61AA18D7A00C32DF6 /* Products */,
+				F087A6FA5ED69601FCDC1D86 /* Pods */,
+				4BECED692104F68DB3F5276D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,18 +111,17 @@
 		56E55CA71AA18D7A00C32DF6 /* FounderSF */ = {
 			isa = PBXGroup;
 			children = (
+				56E55CE51AA2930F00C32DF6 /* Utils */,
 				56E55CD81AA284CC00C32DF6 /* Storyboard */,
 				56E55CD71AA284B500C32DF6 /* Views */,
 				56E55CD21AA26F3B00C32DF6 /* images */,
-				56E55CCD1AA1978E00C32DF6 /* Message */,
-				56E55CCC1AA196D400C32DF6 /* StartupInvestorList */,
-				56E55CCB1AA1967700C32DF6 /* Login */,
 				56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */,
 				56E55CAC1AA18D7A00C32DF6 /* ViewController.swift */,
 				56E55CAE1AA18D7A00C32DF6 /* Main.storyboard */,
 				56E55CB11AA18D7A00C32DF6 /* Images.xcassets */,
 				56E55CB31AA18D7A00C32DF6 /* LaunchScreen.xib */,
 				56E55CA81AA18D7A00C32DF6 /* Supporting Files */,
+				565BBF081AA42CFC00462214 /* FounderSF-Bridging-Header.h */,
 			);
 			path = FounderSF;
 			sourceTree = "<group>";
@@ -132,30 +159,10 @@
 			path = EntryDisplay;
 			sourceTree = "<group>";
 		};
-		56E55CCB1AA1967700C32DF6 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		56E55CCC1AA196D400C32DF6 /* StartupInvestorList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StartupInvestorList;
-			sourceTree = "<group>";
-		};
-		56E55CCD1AA1978E00C32DF6 /* Message */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
 		56E55CD21AA26F3B00C32DF6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				565BBF0B1AA57B9D00462214 /* person_placeholder.png */,
 				56E55CD51AA2719D00C32DF6 /* consmos.jpg */,
 			);
 			path = images;
@@ -164,6 +171,7 @@
 		56E55CD71AA284B500C32DF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56E55CE21AA2895E00C32DF6 /* FounderInvestorTinder */,
 				56E55CCA1AA1900600C32DF6 /* EntryDisplay */,
 			);
 			path = Views;
@@ -173,8 +181,36 @@
 			isa = PBXGroup;
 			children = (
 				56E55CD91AA2875100C32DF6 /* EntryDisplay.storyboard */,
+				56E55CE01AA2895100C32DF6 /* FounderTinder.storyboard */,
+				565BBF0F1AA6B1CC00462214 /* InvestorTinder.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		56E55CE21AA2895E00C32DF6 /* FounderInvestorTinder */ = {
+			isa = PBXGroup;
+			children = (
+				56E55CE31AA2899A00C32DF6 /* FounderTinderViewController.swift */,
+				565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */,
+			);
+			path = FounderInvestorTinder;
+			sourceTree = "<group>";
+		};
+		56E55CE51AA2930F00C32DF6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				56E55CE61AA2936B00C32DF6 /* UIStoryBoardExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F087A6FA5ED69601FCDC1D86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D30B4DD8039BDE7A76FFB04 /* Pods.debug.xcconfig */,
+				ABA8203E7220B7D73EE51383 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56E55CC41AA18D7B00C32DF6 /* Build configuration list for PBXNativeTarget "FounderSF" */;
 			buildPhases = (
+				F5373152178235F9FFEFF73A /* Check Pods Manifest.lock */,
 				56E55CA11AA18D7A00C32DF6 /* Sources */,
 				56E55CA21AA18D7A00C32DF6 /* Frameworks */,
 				56E55CA31AA18D7A00C32DF6 /* Resources */,
+				43D60C5B4915163672E685FB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,11 +295,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565BBF101AA6B1CC00462214 /* InvestorTinder.storyboard in Resources */,
 				56E55CB01AA18D7A00C32DF6 /* Main.storyboard in Resources */,
 				56E55CB51AA18D7A00C32DF6 /* LaunchScreen.xib in Resources */,
+				56E55CE11AA2895100C32DF6 /* FounderTinder.storyboard in Resources */,
 				56E55CDA1AA2875100C32DF6 /* EntryDisplay.storyboard in Resources */,
 				56E55CB21AA18D7A00C32DF6 /* Images.xcassets in Resources */,
 				56E55CD61AA2719D00C32DF6 /* consmos.jpg in Resources */,
+				565BBF0C1AA57B9D00462214 /* person_placeholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,13 +315,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43D60C5B4915163672E685FB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5373152178235F9FFEFF73A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		56E55CA11AA18D7A00C32DF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E55CE71AA2936B00C32DF6 /* UIStoryBoardExtension.swift in Sources */,
+				565BBF0E1AA6B07600462214 /* InvestorTinderViewController.swift in Sources */,
 				56E55CAD1AA18D7A00C32DF6 /* ViewController.swift in Sources */,
 				56E55CDE1AA287B400C32DF6 /* EntryDIsplayViewController.swift in Sources */,
+				56E55CE41AA2899A00C32DF6 /* FounderTinderViewController.swift in Sources */,
 				56E55CAB1AA18D7A00C32DF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,21 +479,25 @@
 		};
 		56E55CC51AA18D7B00C32DF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D30B4DD8039BDE7A76FFB04 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FounderSF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/FounderSF-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		56E55CC61AA18D7B00C32DF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABA8203E7220B7D73EE51383 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FounderSF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/FounderSF-Bridging-Header.h";
 			};
 			name = Release;
 		};
