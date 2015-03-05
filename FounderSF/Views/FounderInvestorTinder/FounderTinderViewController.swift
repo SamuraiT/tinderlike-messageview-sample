@@ -10,16 +10,15 @@ import UIKit
 
 class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
     
-    @IBOutlet weak var tinderView: UIImageView!
-    var swipeCount = 0
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
        
     }
-    
+
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         var photoURL = [
             "http://static.guim.co.uk/sys-images/Technology/Pix/pictures/2007/07/27/facebook-ap-1.jpg",
             "http://t0.gstatic.com/images?q=tbn:ANd9GcToGNSEs_d2aNZQAiaoXTorLMmHaFipqDdA-qGS6dzoraOxij8u3Q",
@@ -264,13 +263,10 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
         } else {
             println("Like")
         }
-        swipeCount++
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
