@@ -211,9 +211,11 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
         let personImageView = UIImageView(frame: personCGRect)
         let imageURL = NSURL(string: url)
         var personImage: UIImage?
-        if let imageData = NSData(contentsOfURL: imageURL!){
+        var err : NSError?
+        if let imageData = NSData(contentsOfURL: imageURL!, options: NSDataReadingOptions.DataReadingUncached, error: &err){
             personImage = UIImage(data: imageData)
         } else {
+            println(err)
             personImage = UIImage(named: "person_placeholder.png")
         }
         personImageView.image = personImage
