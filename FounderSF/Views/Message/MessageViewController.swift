@@ -30,13 +30,13 @@ class MessageViewController: JSQMessagesViewController {
         self.outgoingBubble =
             JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleBlueColor())
         self.outgoingAvator =
-            JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "face_not_free.jpeg"), diameter: 64)
+            JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "person_placeholder.png"), diameter: 64)
         
         // set other user's info
         self.incomingBubble =
             JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleGreenColor())
         self.incomingAvator =
-            JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "woman_not_free.jpeg"), diameter: 64)
+            JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "person_placeholder.png"), diameter: 64)
         
         self.view.backgroundColor = UIColor.whiteColor()
     }

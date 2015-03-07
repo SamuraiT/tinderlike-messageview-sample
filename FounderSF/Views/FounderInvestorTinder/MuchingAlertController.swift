@@ -23,6 +23,7 @@ class MuchingAlertController{
         
     alert.addAction(UIAlertAction(title: "Send Message", style: .Default, handler: { (action) -> Void in
         //go to message view
+        UIStoryboard.presentMessageViewController(selfview)
         println("send message")
     }))
 
