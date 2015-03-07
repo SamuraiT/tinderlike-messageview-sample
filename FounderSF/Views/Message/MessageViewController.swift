@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MessageViewController: JSQMessagesViewController {
+class MessageViewController: JSQMessagesViewController{
     
     var msg:JSQMessage!
     var messages = [JSQMessage]()
@@ -111,5 +111,3 @@ extension MessageViewController: JSQMessagesCollectionViewDataSource {
 extension MessageViewController: JSQMessagesCollectionViewDelegateFlowLayout{
     
 }
-
-
