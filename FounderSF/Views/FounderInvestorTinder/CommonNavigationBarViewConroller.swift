@@ -26,8 +26,8 @@ class CommonNavigationBarViewConroller: UINavigationController,UINavigationBarDe
         navigationItem.title = title
         
         // Create left and right button for navigation item
-        let leftButton = UIBarButtonItem(image: UIImage(named: "menu"), style: UIBarButtonItemStyle.Plain, target: self, action: "chatButtonTapped:")
-        let rightButton = UIBarButtonItem(image: UIImage(named: "chat"), style: UIBarButtonItemStyle.Plain, target: self, action: "menuButtonTapped:")
+        let leftButton = UIBarButtonItem(image: UIImage(named: "menu"), style: UIBarButtonItemStyle.Plain, target: self, action: "menuButtonTapped:")
+        let rightButton = UIBarButtonItem(image: UIImage(named: "chat"), style: UIBarButtonItemStyle.Plain, target: self, action: "chatButtonTapped:")
         //let rightButton = UIBarButtonItem(title: "Right", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
         
         // Create two buttons for the navigation item
@@ -51,7 +51,7 @@ class CommonNavigationBarViewConroller: UINavigationController,UINavigationBarDe
     }
     
     func chatButtonTapped(button: UIButton){
-       println("chat button")
+        UIStoryboard.presentMatchingPeopleListViewController(self)
     }
     
     func menuButtonTapped(button: UIButton){

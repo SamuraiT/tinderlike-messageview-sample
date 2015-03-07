@@ -7,7 +7,7 @@
         <!--Matching People List View Controller-->
         <scene sceneID="AcW-KS-usP">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="5hK-u9-1Qo" customClass="MatchingPeopleListViewController" customModule="FounderSF" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MatchingPeopleListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5hK-u9-1Qo" customClass="MatchingPeopleListViewController" customModule="FounderSF" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bm2-oj-3qK"/>
                         <viewControllerLayoutGuide type="bottom" id="hcZ-cM-Mh3"/>

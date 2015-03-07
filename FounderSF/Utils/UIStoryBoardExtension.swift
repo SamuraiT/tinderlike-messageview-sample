@@ -9,27 +9,31 @@
 import UIkit
 
 extension UIStoryboard {
-    class func presentEntryDisplayView(selfView: UIViewController) {
-        moveTo("EntryDisplay", storyboardID: "EntryDisplayViewController", view: selfView)
+    class func presentEntryDisplayView(parentView: UIViewController) {
+        moveTo("EntryDisplay", storyboardID: "EntryDisplayViewController", view: parentView)
     }
     
-    class func presentFounderTinderView(selfView: UIViewController) {
-        moveTo("FounderTinder", storyboardID: "FounderTinderViewController", view: selfView)
+    class func presentFounderTinderView(parentView: UIViewController) {
+        moveTo("FounderTinder", storyboardID: "FounderTinderViewController", view: parentView)
     }
     
     
-    class func presentFounderTinderNavigationView(selfView: UIViewController) {
+    class func presentFounderTinderNavigationView(parentView: UIViewController) {
         //FIX
         //when move to navigation controller, view will be blacked out
-        moveTo("FounderTinder", storyboardID: "FounderInvestorTinderNavigationController", view: selfView)
+        moveTo("FounderTinder", storyboardID: "FounderInvestorTinderNavigationController", view: parentView)
     }
     
-    class func presentInvestorTinderView(selfView: UIViewController){
-      moveTo("InvestorTinder", storyboardID: "InvestorTinderViewController", view: selfView)
+    class func presentInvestorTinderView(parentView: UIViewController){
+      moveTo("InvestorTinder", storyboardID: "InvestorTinderViewController", view: parentView)
     }
     
-    class func presentMessageViewController(selfView: UIViewController){
-        moveTo("Message", storyboardID: "MessageViewController", view: selfView)
+    class func presentMessageViewController(paretView: UIViewController){
+        moveTo("Message", storyboardID: "MessageViewController", view: paretView)
+    }
+    
+    class func presentMatchingPeopleListViewController(parentView: UIViewController){
+        moveTo("MatchingPeopleList", storyboardID: "MatchingPeopleListViewController", view: parentView)
     }
   
     class func moveTo(storyboardName:String, storyboardID:String, view:UIViewController){
