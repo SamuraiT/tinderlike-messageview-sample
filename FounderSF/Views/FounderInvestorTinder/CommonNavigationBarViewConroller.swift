@@ -11,15 +11,15 @@ class CommonNavigationBarViewConroller: UINavigationController,UINavigationBarDe
     func setNavigationBar(title: String, parentView: UIViewController){
         // Offset by 20 pixels vertically to take the status bar into account
         let navigationBar = UINavigationBar(frame: CGRectMake(0, 20, parentView.view.frame.size.width, 44))
-        navigationBar.opaque = true
+        //navigationBar.opaque = true
+        
         //add blur effect
         let blurEffect = UIBlurEffect(style: .Light)
         var visualEffectView = UIVisualEffectView(effect: blurEffect)
         visualEffectView.frame = navigationBar.bounds
-        //visualEffectView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
-        navigationBar.addSubview(visualEffectView)
-        
+        visualEffectView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
         navigationBar.delegate = self;
+        navigationBar.addSubview(visualEffectView)
         
         // Create a navigation item with a title
         let navigationItem = UINavigationItem()
