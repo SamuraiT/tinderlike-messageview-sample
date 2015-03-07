@@ -27,6 +27,10 @@ extension UIStoryboard {
     class func presentInvestorTinderView(selfView: UIViewController){
       moveTo("InvestorTinder", storyboardID: "InvestorTinderViewController", view: selfView)
     }
+    
+    class func presentMessageViewController(selfView: UIViewController){
+        moveTo("Message", storyboardID: "MessageViewController", view: selfView)
+    }
   
     class func moveTo(storyboardName:String, storyboardID:String, view:UIViewController){
         let storyboard:UIStoryboard = UIStoryboard(name: storyboardName, bundle: NSBundle.mainBundle())
