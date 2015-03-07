@@ -10,6 +10,10 @@
 		565BBF0C1AA57B9D00462214 /* person_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 565BBF0B1AA57B9D00462214 /* person_placeholder.png */; };
 		565BBF0E1AA6B07600462214 /* InvestorTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */; };
 		565BBF101AA6B1CC00462214 /* InvestorTinder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565BBF0F1AA6B1CC00462214 /* InvestorTinder.storyboard */; };
+		56A936AB1AABB2E30023B333 /* MatchingPeopleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56A936AA1AABB2E30023B333 /* MatchingPeopleList.storyboard */; };
+		56A936AE1AABB3D30023B333 /* MatchingPeopleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A936AD1AABB3D30023B333 /* MatchingPeopleListViewController.swift */; };
+		56A936B01AABBCE30023B333 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A936AF1AABBCE30023B333 /* PersonCell.swift */; };
+		56A936B21AABBD3F0023B333 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A936B11AABBD3F0023B333 /* Person.swift */; };
 		56BF07C01AAA70B900860CC3 /* MuchingAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF07BF1AAA70B900860CC3 /* MuchingAlertController.swift */; };
 		56BF07C31AAA78D200860CC3 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF07C21AAA78D200860CC3 /* MessageViewController.swift */; };
 		56BF07C51AAA790300860CC3 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BF07C41AAA790300860CC3 /* Message.storyboard */; };
@@ -45,6 +49,10 @@
 		565BBF0B1AA57B9D00462214 /* person_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person_placeholder.png; sourceTree = "<group>"; };
 		565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestorTinderViewController.swift; sourceTree = "<group>"; };
 		565BBF0F1AA6B1CC00462214 /* InvestorTinder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InvestorTinder.storyboard; sourceTree = "<group>"; };
+		56A936AA1AABB2E30023B333 /* MatchingPeopleList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MatchingPeopleList.storyboard; sourceTree = "<group>"; };
+		56A936AD1AABB3D30023B333 /* MatchingPeopleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingPeopleListViewController.swift; sourceTree = "<group>"; };
+		56A936AF1AABBCE30023B333 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		56A936B11AABBD3F0023B333 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		56BF07BF1AAA70B900860CC3 /* MuchingAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuchingAlertController.swift; sourceTree = "<group>"; };
 		56BF07C21AAA78D200860CC3 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		56BF07C41AAA790300860CC3 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
@@ -92,6 +100,16 @@
 				069EBA7CF135905943D41900 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56A936AC1AABB3750023B333 /* MatchingPeopleList */ = {
+			isa = PBXGroup;
+			children = (
+				56A936AD1AABB3D30023B333 /* MatchingPeopleListViewController.swift */,
+				56A936AF1AABBCE30023B333 /* PersonCell.swift */,
+				56A936B11AABBD3F0023B333 /* Person.swift */,
+			);
+			path = MatchingPeopleList;
 			sourceTree = "<group>";
 		};
 		56BF07C11AAA788900860CC3 /* Message */ = {
@@ -184,6 +202,7 @@
 		56E55CD71AA284B500C32DF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56A936AC1AABB3750023B333 /* MatchingPeopleList */,
 				56BF07C11AAA788900860CC3 /* Message */,
 				56E55CE21AA2895E00C32DF6 /* FounderInvestorTinder */,
 				56E55CCA1AA1900600C32DF6 /* EntryDisplay */,
@@ -198,6 +217,7 @@
 				56E55CE01AA2895100C32DF6 /* FounderTinder.storyboard */,
 				565BBF0F1AA6B1CC00462214 /* InvestorTinder.storyboard */,
 				56BF07C41AAA790300860CC3 /* Message.storyboard */,
+				56A936AA1AABB2E30023B333 /* MatchingPeopleList.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -318,6 +338,7 @@
 				56BF07C51AAA790300860CC3 /* Message.storyboard in Resources */,
 				56E55CDA1AA2875100C32DF6 /* EntryDisplay.storyboard in Resources */,
 				56E55CB21AA18D7A00C32DF6 /* Images.xcassets in Resources */,
+				56A936AB1AABB2E30023B333 /* MatchingPeopleList.storyboard in Resources */,
 				56E55CD61AA2719D00C32DF6 /* consmos.jpg in Resources */,
 				565BBF0C1AA57B9D00462214 /* person_placeholder.png in Resources */,
 			);
@@ -371,11 +392,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E55CE71AA2936B00C32DF6 /* UIStoryBoardExtension.swift in Sources */,
+				56A936AE1AABB3D30023B333 /* MatchingPeopleListViewController.swift in Sources */,
 				56BF07C01AAA70B900860CC3 /* MuchingAlertController.swift in Sources */,
 				56BF07C31AAA78D200860CC3 /* MessageViewController.swift in Sources */,
 				565BBF0E1AA6B07600462214 /* InvestorTinderViewController.swift in Sources */,
 				56E55CAD1AA18D7A00C32DF6 /* ViewController.swift in Sources */,
+				56A936B21AABBD3F0023B333 /* Person.swift in Sources */,
 				56BF07C71AAA8F2C00860CC3 /* CommonNavigationBarViewConroller.swift in Sources */,
+				56A936B01AABBCE30023B333 /* PersonCell.swift in Sources */,
 				56E55CDE1AA287B400C32DF6 /* EntryDIsplayViewController.swift in Sources */,
 				56E55CE41AA2899A00C32DF6 /* FounderTinderViewController.swift in Sources */,
 				56E55CAB1AA18D7A00C32DF6 /* AppDelegate.swift in Sources */,
