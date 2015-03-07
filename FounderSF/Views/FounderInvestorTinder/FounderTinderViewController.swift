@@ -10,7 +10,6 @@ import UIKit
 
 class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -263,6 +262,7 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
         if (direction == MDCSwipeDirection.Left) {
             println("Later")
         } else {
+            MuchingAlertController.alert(self, name: "he")
             println("Like")
         }
     }
