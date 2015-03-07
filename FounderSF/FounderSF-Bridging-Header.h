@@ -9,7 +9,12 @@
 #ifndef FounderSF_FounderSF_Bridging_Header_h
 #define FounderSF_FounderSF_Bridging_Header_h
 
+// for tiner like view
 #import <UIKit/UIKit.h>
 #import <MDCSwipeToChoose/MDCSwipeToChoose.h>
+
+// for message view
+#import "JSQMessages.h"
+#import "JSQMessageData.h"
 
 #endif
