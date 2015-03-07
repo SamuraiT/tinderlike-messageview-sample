@@ -13,6 +13,7 @@
 		56BF07C01AAA70B900860CC3 /* MuchingAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF07BF1AAA70B900860CC3 /* MuchingAlertController.swift */; };
 		56BF07C31AAA78D200860CC3 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF07C21AAA78D200860CC3 /* MessageViewController.swift */; };
 		56BF07C51AAA790300860CC3 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BF07C41AAA790300860CC3 /* Message.storyboard */; };
+		56BF07C71AAA8F2C00860CC3 /* CommonNavigationBarViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF07C61AAA8F2C00860CC3 /* CommonNavigationBarViewConroller.swift */; };
 		56E55CAB1AA18D7A00C32DF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */; };
 		56E55CAD1AA18D7A00C32DF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E55CAC1AA18D7A00C32DF6 /* ViewController.swift */; };
 		56E55CB21AA18D7A00C32DF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E55CB11AA18D7A00C32DF6 /* Images.xcassets */; };
@@ -47,6 +48,7 @@
 		56BF07BF1AAA70B900860CC3 /* MuchingAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuchingAlertController.swift; sourceTree = "<group>"; };
 		56BF07C21AAA78D200860CC3 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		56BF07C41AAA790300860CC3 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		56BF07C61AAA8F2C00860CC3 /* CommonNavigationBarViewConroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonNavigationBarViewConroller.swift; sourceTree = "<group>"; };
 		56E55CA51AA18D7A00C32DF6 /* FounderSF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FounderSF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E55CA91AA18D7A00C32DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E55CAA1AA18D7A00C32DF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				56E55CE31AA2899A00C32DF6 /* FounderTinderViewController.swift */,
 				565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */,
 				56BF07BF1AAA70B900860CC3 /* MuchingAlertController.swift */,
+				56BF07C61AAA8F2C00860CC3 /* CommonNavigationBarViewConroller.swift */,
 			);
 			path = FounderInvestorTinder;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				56BF07C31AAA78D200860CC3 /* MessageViewController.swift in Sources */,
 				565BBF0E1AA6B07600462214 /* InvestorTinderViewController.swift in Sources */,
 				56E55CAD1AA18D7A00C32DF6 /* ViewController.swift in Sources */,
+				56BF07C71AAA8F2C00860CC3 /* CommonNavigationBarViewConroller.swift in Sources */,
 				56E55CDE1AA287B400C32DF6 /* EntryDIsplayViewController.swift in Sources */,
 				56E55CE41AA2899A00C32DF6 /* FounderTinderViewController.swift in Sources */,
 				56E55CAB1AA18D7A00C32DF6 /* AppDelegate.swift in Sources */,

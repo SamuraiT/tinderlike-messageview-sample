@@ -8,11 +8,12 @@
 
 import UIKit
 
-class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
+class FounderTinderViewController:CommonNavigationBarViewConroller, MDCSwipeToChooseDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.view.backgroundColor = UIColor.whiteColor()
+        setNavigationBar("Title", selfView:self)
     }
 
     override func viewWillAppear(animated: Bool) {
