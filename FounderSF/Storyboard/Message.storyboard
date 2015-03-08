@@ -35,7 +35,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="emO-P8-Cvu">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="yIj-0U-XPt"/>
-                        <barButtonItem key="rightBarButtonItem" image="chat" id="OJL-iw-b2g"/>
+                        <barButtonItem key="rightBarButtonItem" image="chat" id="OJL-iw-b2g">
+                            <connections>
+                                <action selector="chatTapped:" destination="lzT-eO-yxz" id="SuC-r7-mUW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTU-j9-ul1" userLabel="First Responder" sceneMemberID="firstResponder"/>

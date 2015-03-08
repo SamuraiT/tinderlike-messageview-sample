@@ -21,6 +21,10 @@ class MessageViewController: JSQMessagesViewController{
     var _senderId : String?
     var _senderDisplayName : String?
     
+    @IBAction func chatTapped(sender: AnyObject) {
+        UIStoryboard.presentMatchingPeopleListViewController(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self._senderId = "12345"
@@ -63,7 +67,7 @@ class MessageViewController: JSQMessagesViewController{
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         //TODO instead of creating mesage, request server if there are new messages.
         //If so, get the new message, apend it and show
-        let message = JSQMessage(senderId: "124", displayName: "tatsuro", text: "Hi, great!")
+        let message = JSQMessage(senderId: "124", displayName: "tatsuro", text: "Hi, nice to meet you! You wanna invest on us? wow it sounds great! \r but Did you know there are better guys who you should invest. They are Hiro and Tatsuro")
         self.messages.append(message)
         self.finishReceivingMessageAnimated(true)
     }
