@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5hK-u9-1Qo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="37t-KU-kSj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -65,6 +65,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uRF-r3-lRn">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="eE1-jl-m1f"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="g15-cr-m6Z" id="Me7-4O-ptV"/>
@@ -74,5 +77,24 @@
             </objects>
             <point key="canvasLocation" x="354" y="224"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DAK-hc-32r">
+            <objects>
+                <navigationController storyboardIdentifier="MatchingPeopleListNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="37t-KU-kSj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="niV-4H-6in">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5hK-u9-1Qo" kind="relationship" relationship="rootViewController" id="vyE-Np-Tsf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4Q-rs-qMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="224"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="18" height="12"/>
+    </resources>
 </document>

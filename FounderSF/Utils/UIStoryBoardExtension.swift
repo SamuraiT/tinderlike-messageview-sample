@@ -33,7 +33,7 @@ extension UIStoryboard {
     }
     
     class func presentMatchingPeopleListViewController(parentView: UIViewController){
-        moveTo("MatchingPeopleList", storyboardID: "MatchingPeopleListViewController", view: parentView)
+        moveTo("MatchingPeopleList", storyboardID: "MatchingPeopleListNavigationController", view: parentView)
     }
   
     class func moveTo(storyboardName:String, storyboardID:String, view:UIViewController){
