@@ -10,11 +10,6 @@ import UIKit
 
 class InvestorTinderViewController: FounderTinderViewController{
    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func viewWillAppear(animated: Bool){
         
         var photoURL = [

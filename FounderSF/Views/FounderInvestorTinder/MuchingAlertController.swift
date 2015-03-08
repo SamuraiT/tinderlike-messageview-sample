@@ -14,7 +14,7 @@ class MuchingAlertController{
     //1. Create the alert controller.
     var message =  "You and \(name) both are interested each other."
     var alert = UIAlertController(title: "Mached!", message: message, preferredStyle: .Alert)
-
+    
     //3. Grab the value from the text field, and print it when the user clicks OK.
     alert.addAction(UIAlertAction(title: "Keep Going", style: .Default, handler: { (action) -> Void in
         //do nothing
