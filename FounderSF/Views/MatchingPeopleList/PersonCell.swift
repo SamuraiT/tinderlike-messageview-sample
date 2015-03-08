@@ -15,7 +15,7 @@ class PersonCell: UITableViewCell{
     @IBOutlet weak var professionalHeadline: UILabel!
 
     func configureForPerson(person: Person){
-        personImageView.image  = person.image
+        personImageView = Person.circleImageView(person.imageURL, personImageView: personImageView, side: personImageView.frame.height)
         name.text = "\(person.firstName) \(person.lastName)"
         professionalHeadline.text = person.professionalHeadline
     }
