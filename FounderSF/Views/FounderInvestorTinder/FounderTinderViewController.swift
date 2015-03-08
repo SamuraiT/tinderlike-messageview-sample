@@ -18,10 +18,11 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
     }
-
+    var swipe = 0
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+       
         var photoURL = [
             "http://static.guim.co.uk/sys-images/Technology/Pix/pictures/2007/07/27/facebook-ap-1.jpg",
             "http://t0.gstatic.com/images?q=tbn:ANd9GcToGNSEs_d2aNZQAiaoXTorLMmHaFipqDdA-qGS6dzoraOxij8u3Q",
@@ -214,16 +215,19 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
         let personImageView = UIImageView(frame: personCGRect)
         let imageURL = NSURL(string: url)
         var personImage: UIImage?
-        var err : NSError?
-        if let imageData = NSData(contentsOfURL: imageURL!, options: NSDataReadingOptions.DataReadingUncached, error: &err){
-            personImage = UIImage(data: imageData)
-        } else {
-            println(err)
-            personImage = UIImage(named: "person_placeholder.png")
-        }
-        personImageView.image = personImage
-        personImageView.layer.cornerRadius = personImageView.frame.size.width / 2;
-        personImageView.clipsToBounds = true
+        ImageLoader.sharedLoader.imageForUrl(url as NSString, completionHandler:{(image: UIImage?, url: String) in
+            personImage = image
+            personImageView.image = personImage
+            personImageView.layer.cornerRadius = personImageView.frame.size.width / 2;
+            personImageView.clipsToBounds = true
+        })
+        //var err : NSError?
+        //if let imageData = NSData(contentsOfURL: imageURL!, options: NSDataReadingOptions.DataReadingUncached, error: &err){
+        //    personImage = UIImage(data: imageData)
+        //} else {
+        //    println(err)
+        //    personImage = UIImage(named: "person_placeholder.png")
+        //}
         return personImageView
     }
     
@@ -265,10 +269,12 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
     func view(view: UIView!, wasChosenWithDirection direction: MDCSwipeDirection) {
         if (direction == MDCSwipeDirection.Left) {
             println("Later")
+            people.removeAtIndex(swipe)
         } else {
             MuchingAlertController.alert(self, name: "he")
             println("Like")
         }
+        swipe++;
     }
     
     override func didReceiveMemoryWarning() {
