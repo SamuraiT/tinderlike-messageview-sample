@@ -14,6 +14,7 @@
 		56A936AE1AABB3D30023B333 /* MatchingPeopleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A936AD1AABB3D30023B333 /* MatchingPeopleListViewController.swift */; };
 		56A936B01AABBCE30023B333 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A936AF1AABBCE30023B333 /* PersonCell.swift */; };
 		56A936B21AABBD3F0023B333 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A936B11AABBD3F0023B333 /* Person.swift */; };
+		56A936B41AABCC260023B333 /* ChatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A936B31AABCC260023B333 /* ChatButton.swift */; };
 		56BF07C01AAA70B900860CC3 /* MuchingAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF07BF1AAA70B900860CC3 /* MuchingAlertController.swift */; };
 		56BF07C31AAA78D200860CC3 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF07C21AAA78D200860CC3 /* MessageViewController.swift */; };
 		56BF07C51AAA790300860CC3 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BF07C41AAA790300860CC3 /* Message.storyboard */; };
@@ -53,6 +54,7 @@
 		56A936AD1AABB3D30023B333 /* MatchingPeopleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingPeopleListViewController.swift; sourceTree = "<group>"; };
 		56A936AF1AABBCE30023B333 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		56A936B11AABBD3F0023B333 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		56A936B31AABCC260023B333 /* ChatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatButton.swift; sourceTree = "<group>"; };
 		56BF07BF1AAA70B900860CC3 /* MuchingAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuchingAlertController.swift; sourceTree = "<group>"; };
 		56BF07C21AAA78D200860CC3 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		56BF07C41AAA790300860CC3 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				565BBF0D1AA6B07600462214 /* InvestorTinderViewController.swift */,
 				56BF07BF1AAA70B900860CC3 /* MuchingAlertController.swift */,
 				56BF07C61AAA8F2C00860CC3 /* CommonNavigationBarViewConroller.swift */,
+				56A936B31AABCC260023B333 /* ChatButton.swift */,
 			);
 			path = FounderInvestorTinder;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E55CE71AA2936B00C32DF6 /* UIStoryBoardExtension.swift in Sources */,
+				56A936B41AABCC260023B333 /* ChatButton.swift in Sources */,
 				56A936AE1AABB3D30023B333 /* MatchingPeopleListViewController.swift in Sources */,
 				56BF07C01AAA70B900860CC3 /* MuchingAlertController.swift in Sources */,
 				56BF07C31AAA78D200860CC3 /* MessageViewController.swift in Sources */,

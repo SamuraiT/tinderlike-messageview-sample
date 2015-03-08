@@ -8,12 +8,15 @@
 
 import UIKit
 
-class FounderTinderViewController: CommonNavigationBarViewConroller, MDCSwipeToChooseDelegate{
+class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
+    
+    @IBAction func chatTapped(sender: AnyObject) {
+        UIStoryboard.presentMatchingPeopleListViewController(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
-        setNavigationBar("", parentView: self)
     }
 
     override func viewWillAppear(animated: Bool) {

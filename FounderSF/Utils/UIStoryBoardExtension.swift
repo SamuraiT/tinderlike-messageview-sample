@@ -14,7 +14,7 @@ extension UIStoryboard {
     }
     
     class func presentFounderTinderView(parentView: UIViewController) {
-        moveTo("FounderTinder", storyboardID: "FounderTinderViewController", view: parentView)
+        moveTo("FounderTinder", storyboardID: "FounderInvestorTinderNavigationController", view: parentView)
     }
     
     
@@ -25,11 +25,11 @@ extension UIStoryboard {
     }
     
     class func presentInvestorTinderView(parentView: UIViewController){
-      moveTo("InvestorTinder", storyboardID: "InvestorTinderViewController", view: parentView)
+      moveTo("InvestorTinder", storyboardID: "InvestorTinderNavigationController", view: parentView)
     }
     
     class func presentMessageViewController(paretView: UIViewController){
-        moveTo("Message", storyboardID: "MessageViewController", view: paretView)
+        moveTo("Message", storyboardID: "MessageNavigationViewController", view: paretView)
     }
     
     class func presentMatchingPeopleListViewController(parentView: UIViewController){

@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="lzT-eO-yxz" kind="show" id="nhl-q1-utA"/>
+                        <segue destination="lzT-eO-yxz" kind="relationship" relationship="rootViewController" id="v01-Vu-G7l"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jma-5Z-ZL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -33,10 +33,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="emO-P8-Cvu">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="yIj-0U-XPt"/>
+                        <barButtonItem key="rightBarButtonItem" image="chat" id="OJL-iw-b2g"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTU-j9-ul1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="310" y="391"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat" width="25" height="25"/>
+        <image name="menu" width="18" height="12"/>
+    </resources>
 </document>
