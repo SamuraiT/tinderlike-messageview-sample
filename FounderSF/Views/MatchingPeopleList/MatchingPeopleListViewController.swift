@@ -13,8 +13,6 @@ class MatchingPeopleListViewController: UIViewController, UITableViewDataSource,
    
     @IBOutlet weak var tableView: UITableView!
     
-    var people = [Person]()
-    
     struct TableView {
         struct CellIdentifiers {
             static let PersonCell = "PersonCell"
@@ -39,8 +37,9 @@ class MatchingPeopleListViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.PersonCell) as PersonCell
         let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.PersonCell, forIndexPath: indexPath) as PersonCell
-        //cell.configureForPerson(people[indexPath.row])
+        cell.configureForPerson(people[indexPath.row])
         return cell
     }
     
@@ -48,6 +47,7 @@ class MatchingPeopleListViewController: UIViewController, UITableViewDataSource,
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         println(people[indexPath.row])
+        UIStoryboard.presentMessageViewController(self)
         //let selectedPerson = people[indexPath.row]
         //delegate?.personSelected(selectedPerson)
     }
