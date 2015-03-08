@@ -10,4 +10,14 @@ import UIkit
 
 class PersonCell: UITableViewCell{
     
+    @IBOutlet weak var personImageView: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var professionalHeadline: UILabel!
+
+    func configureForPerson(person: Person){
+        personImageView.image  = person.image
+        name.text = "\(person.firstName) \(person.lastName)"
+        professionalHeadline.text = person.professionalHeadline
+    }
+
 }
