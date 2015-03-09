@@ -42,6 +42,7 @@ class MessageViewController: JSQMessagesViewController{
         self.incomingAvator =
             JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "person_placeholder.png"), diameter: 64)
         
+        
         self.view.backgroundColor = UIColor.whiteColor()
     }
     
@@ -104,9 +105,10 @@ extension MessageViewController: JSQMessagesCollectionViewDataSource {
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
         let message = self.messages[indexPath.row]
         if (message.senderId == self.senderId) {
-            return self.outgoingAvator;
+            return nil
+            //self.outgoingAvator;
         }
-        return self.incomingAvator;
+        return nil //self.incomingAvator;
     }
     
     

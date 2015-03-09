@@ -52,4 +52,12 @@ class MatchingPeopleListViewController: UIViewController, UITableViewDataSource,
         //delegate?.personSelected(selectedPerson)
     }
     
+    @IBAction func menuTapped(sender: AnyObject) {
+        if isUserInvestor == true{
+            UIStoryboard.presentFounderTinderView(self)
+        } else {
+            UIStoryboard.presentInvestorTinderView(self)
+        }
+    }
+    
 }
