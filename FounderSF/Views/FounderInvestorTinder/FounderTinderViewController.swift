@@ -269,8 +269,8 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
     func view(view: UIView!, wasChosenWithDirection direction: MDCSwipeDirection) {
         if (direction == MDCSwipeDirection.Left) {
             println("Later")
-            people.removeAtIndex(swipe)
         } else {
+            likedPeople.append(people[swipe])
             MuchingAlertController.alert(self, name: "he")
             println("Like")
         }
@@ -282,3 +282,5 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
         // Dispose of any resources that can be recreated.
     }
 }
+
+var likedPeople = Array<Person>()
