@@ -42,12 +42,19 @@ class EntryDisplayViewController: UIViewController {
     }
     
     @IBAction func founderTapped(sender: AnyObject) {
+        people = Person.investors()
+        isUserInvestor = false
         UIStoryboard.presentInvestorTinderView(self)
     }
     
     @IBAction func investorTapped(sender: AnyObject) {
-      UIStoryboard.presentFounderTinderView(self)
+        people = Person.founders()
+        isUserInvestor = true
+        UIStoryboard.presentFounderTinderView(self)
     }
 
 }
+
+var people = Array<Person>()
+var isUserInvestor: Bool!
 
