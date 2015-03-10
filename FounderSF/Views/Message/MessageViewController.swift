@@ -74,7 +74,7 @@ class MessageViewController: JSQMessagesViewController{
     }
     
     func receiveAutoMessage(){
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "didFinishMessageTimer:", userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "didFinishMessageTimer:", userInfo: nil, repeats: false)
     }
     
 }
