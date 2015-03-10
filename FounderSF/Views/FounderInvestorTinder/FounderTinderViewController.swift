@@ -99,9 +99,9 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
         //Since we wanna controll size: make it resizable easily,
         //we set constant variable for each CGRect size
         let swipeViewX = 10 as CGFloat
-        let swipeViewY = 100 as CGFloat
+        let swipeViewY = self.view.bounds.size.height * 0.25
         let swipeViewWidth = self.view.bounds.size.width - 20;
-        let swipeViewHeight = self.view.bounds.size.height - 300;
+        let swipeViewHeight = self.view.bounds.size.height * 0.6;
         let CGRectForSwipeView = CGRect(
                 x: swipeViewX, y: swipeViewY,
                 width: swipeViewWidth, height: swipeViewHeight
@@ -110,8 +110,8 @@ class FounderTinderViewController: UIViewController, MDCSwipeToChooseDelegate{
                 
         let personImageView_x = 10.0 as CGFloat
         let personImageView_y = 10.0 as CGFloat
-        let personImageViewWidth = swipeViewWidth / 3.0 - 10.0 as CGFloat
         let personImageViewHeight = swipeViewHeight / 3.0 - 10.0 as CGFloat
+        let personImageViewWidth = personImageViewHeight //swipeViewWidth / 3.0 - 10.0 as CGFloat
         let CGRectForPersonImageView = CGRect(
                 x: personImageView_x, y: personImageView_y,
                 width: personImageViewWidth, height: personImageViewHeight
