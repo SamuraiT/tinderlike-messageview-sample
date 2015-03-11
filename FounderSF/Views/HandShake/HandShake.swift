@@ -60,3 +60,21 @@ class handShakeAlertController{
         return self.is_dealed
     }
 }
+
+class congratsAlertController{
+    
+    class func congrats(selfview: UIViewController){
+        
+        //1. Create the alert controller.
+        var alert = UIAlertController(title: "Congrats!", message: "Fundraised! Contract was confirmed!", preferredStyle: .Alert)
+        // 4. Present the alert.
+
+        selfview.presentViewController(alert, animated: true, completion: nil)
+        
+        alert.addAction(UIAlertAction(title: "ok", style: .Default, handler: { (action) -> Void in
+            //go to message view
+        }))
+        
+    }
+    
+}

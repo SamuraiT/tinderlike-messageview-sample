@@ -95,6 +95,12 @@ class MessageViewController: JSQMessagesViewController{
         let message = JSQMessage(senderId: "124", displayName: "tatsuro", text: "Ok, confirmed")
         self.messages.append(message)
         self.finishReceivingMessageAnimated(true)
+        NSTimer.scheduledTimerWithTimeInterval(1.4, target: self, selector: Selector("sayCongrats"), userInfo: nil, repeats: false)
+        
+    }
+    
+    func sayCongrats(){
+       congratsAlertController.congrats(self)
     }
     
     func receiveAutoMessage(selector: Selector){
