@@ -304,6 +304,7 @@
 				TargetAttributes = {
 					56E55CA41AA18D7A00C32DF6 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 2XTYX4J2XB;
 					};
 					56E55CB91AA18D7B00C32DF6 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -522,9 +523,12 @@
 			baseConfigurationReference = 4D30B4DD8039BDE7A76FFB04 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FounderSF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/FounderSF-Bridging-Header.h";
 			};
 			name = Debug;
@@ -534,9 +538,12 @@
 			baseConfigurationReference = ABA8203E7220B7D73EE51383 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FounderSF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/FounderSF-Bridging-Header.h";
 			};
 			name = Release;

@@ -66,7 +66,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="uRF-r3-lRn">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="eE1-jl-m1f"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="eE1-jl-m1f">
+                            <connections>
+                                <action selector="menuTapped:" destination="5hK-u9-1Qo" id="YXJ-sK-Aqw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>

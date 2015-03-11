@@ -105,6 +105,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "FireCircle"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

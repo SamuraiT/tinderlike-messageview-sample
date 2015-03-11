@@ -33,23 +33,31 @@ class MatchingPeopleListViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return people.count
+        return likedPeople.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.PersonCell) as PersonCell
         let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.PersonCell, forIndexPath: indexPath) as PersonCell
-        cell.configureForPerson(people[indexPath.row])
+        cell.configureForPerson(likedPeople[indexPath.row])
         return cell
     }
     
     // Mark: Table View Delegate
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        println(people[indexPath.row])
+        println(likedPeople[indexPath.row])
         UIStoryboard.presentMessageViewController(self)
         //let selectedPerson = people[indexPath.row]
         //delegate?.personSelected(selectedPerson)
+    }
+    
+    @IBAction func menuTapped(sender: AnyObject) {
+        if isUserInvestor == true{
+            UIStoryboard.presentFounderTinderView(self)
+        } else {
+            UIStoryboard.presentInvestorTinderView(self)
+        }
     }
     
 }

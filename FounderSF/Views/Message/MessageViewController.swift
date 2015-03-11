@@ -25,6 +25,13 @@ class MessageViewController: JSQMessagesViewController{
         UIStoryboard.presentMatchingPeopleListViewController(self)
     }
     
+    @IBAction func menuTapped(sender: AnyObject) {
+        if isUserInvestor == true{
+            UIStoryboard.presentFounderTinderView(self)
+        } else {
+            UIStoryboard.presentInvestorTinderView(self)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self._senderId = "12345"
@@ -41,6 +48,7 @@ class MessageViewController: JSQMessagesViewController{
             JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleGreenColor())
         self.incomingAvator =
             JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "person_placeholder.png"), diameter: 64)
+        
         
         self.view.backgroundColor = UIColor.whiteColor()
     }
@@ -73,7 +81,7 @@ class MessageViewController: JSQMessagesViewController{
     }
     
     func receiveAutoMessage(){
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "didFinishMessageTimer:", userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "didFinishMessageTimer:", userInfo: nil, repeats: false)
     }
     
 }
@@ -104,9 +112,10 @@ extension MessageViewController: JSQMessagesCollectionViewDataSource {
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
         let message = self.messages[indexPath.row]
         if (message.senderId == self.senderId) {
-            return self.outgoingAvator;
+            return nil
+            //self.outgoingAvator;
         }
-        return self.incomingAvator;
+        return nil //self.incomingAvator;
     }
     
     
