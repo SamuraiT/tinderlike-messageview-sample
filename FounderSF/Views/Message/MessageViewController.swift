@@ -21,8 +21,19 @@ class MessageViewController: JSQMessagesViewController{
     var _senderId : String?
     var _senderDisplayName : String?
     
-    @IBAction func chatTapped(sender: AnyObject) {
-        UIStoryboard.presentMatchingPeopleListViewController(self)
+    @IBAction func handShakeTapped(sender: AnyObject) {
+        var handshake = handShakeAlertController()
+        handshake.handshakeAlert(self){ () -> () in
+            if (handshake.is_dealed == true) {
+            JSQSystemSoundPlayer.jsq_playMessageSentSound()
+            self.msg = JSQMessage(senderId: self._senderId, senderDisplayName: self._senderDisplayName, date: NSDate(), text: handshake.deal)
+            self.messages.append(self.msg)
+            self.finishSendingMessageAnimated(true)
+            self.receiveAutoMessage("conformedMessage:")
+            }
+            println(handshake.is_handshaked())
+        }
+        
     }
     
     @IBAction func menuTapped(sender: AnyObject) {
@@ -68,7 +79,7 @@ class MessageViewController: JSQMessagesViewController{
         self.msg = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: NSDate(), text: text)
         messages.append(self.msg)
         self.finishSendingMessageAnimated(true)
-        receiveAutoMessage()
+        receiveAutoMessage("didFinishMessageTimer:")
     }
     
     func didFinishMessageTimer(timer: NSTimer){
@@ -80,8 +91,14 @@ class MessageViewController: JSQMessagesViewController{
         self.finishReceivingMessageAnimated(true)
     }
     
-    func receiveAutoMessage(){
-        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "didFinishMessageTimer:", userInfo: nil, repeats: false)
+    func conformedMessage(timer: NSTimer){
+        let message = JSQMessage(senderId: "124", displayName: "tatsuro", text: "Ok, confirmed")
+        self.messages.append(message)
+        self.finishReceivingMessageAnimated(true)
+    }
+    
+    func receiveAutoMessage(selector: Selector){
+        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: selector, userInfo: nil, repeats: false)
     }
     
 }
