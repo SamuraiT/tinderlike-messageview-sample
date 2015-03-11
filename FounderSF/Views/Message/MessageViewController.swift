@@ -25,6 +25,13 @@ class MessageViewController: JSQMessagesViewController{
         UIStoryboard.presentMatchingPeopleListViewController(self)
     }
     
+    @IBAction func menuTapped(sender: AnyObject) {
+        if isUserInvestor == true{
+            UIStoryboard.presentFounderTinderView(self)
+        } else {
+            UIStoryboard.presentInvestorTinderView(self)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self._senderId = "12345"
